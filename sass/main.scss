@@ -21,6 +21,7 @@ html {
 body {
 	background-color: $bg-color;
 	color: $font-standard;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
@@ -37,6 +38,9 @@ body {
 		padding: 0 5px;
 		color: $font-standard;
 		text-decoration: none;
+		.logo {
+			font-family: 'Satisfy', cursive;
+		}
 	}
 
 	.nav-container {
