@@ -1,2 +1,2 @@
-# onlineShop
+# onlineStore
 Online shop project
