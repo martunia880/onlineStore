@@ -1,0 +1,95 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $bg-color;
+	color: $font-standard;
+}
+
+.nav {
+    position: fixed;
+	display: flex;
+	align-items: center;
+	// justify-content: center;
+	width: 100%;
+	height: 40px;
+	padding: 0px 10px;
+	background-color: $field-bg-color;
+
+	a {
+		padding: 0 5px;
+		color: $font-standard;
+		text-decoration: none;
+	}
+
+	.nav-container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+
+		.nav-links {
+			padding-right: 25px;
+		}
+
+		a:hover {
+			color: $hover-color;
+		}
+	}
+}
+
+header {
+	.slide-box {
+		width: 100%;
+		height: 200px;
+		.slide {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.slide-one {
+			background-image: url('/img/clothes.jpg');
+		}
+	}
+}
+
+section.newproducts {
+    h2 {
+      margin-top: 10px;
+    }
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        .product-box {
+            background-color: aquamarine;
+            margin: 10px;
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
