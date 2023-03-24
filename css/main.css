@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #DFDFDE;
+  color: #222;
+}
+
+.nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0px 10px;
+  background-color: #F7F5F2;
+}
+.nav a {
+  padding: 0 5px;
+  color: #222;
+  text-decoration: none;
+}
+.nav .nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.nav .nav-container .nav-links {
+  padding-right: 25px;
+}
+.nav .nav-container a:hover {
+  color: rgb(255, 136, 0);
+}
+
+header .slide-box {
+  width: 100%;
+  height: 200px;
+}
+header .slide-box .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .slide-box .slide-one {
+  background-image: url("/img/clothes.jpg");
+}
+
+section.newproducts h2 {
+  margin-top: 10px;
+}
+section.newproducts .products-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.newproducts .products-container .product-box {
+  background-color: aquamarine;
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+}/*# sourceMappingURL=main.css.map */
