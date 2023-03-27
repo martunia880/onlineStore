@@ -22,17 +22,28 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+section {
+  margin: 20px 30px;
+}
+section h2 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 2.7rem;
+}
+
 .nav {
   position: fixed;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 40px;
-  padding: 0px 10px;
+  height: 60px;
+  padding: 10px 20px;
+  font-size: 1.8rem;
   background-color: #F7F5F2;
+  z-index: 10;
 }
 .nav a {
-  padding: 0 5px;
+  padding: 0 10px;
   color: #222;
   text-decoration: none;
 }
@@ -55,7 +66,7 @@ body {
 
 header .slide-box {
   width: 100%;
-  height: 200px;
+  height: 100vh;
 }
 header .slide-box .slide {
   display: flex;
@@ -69,20 +80,64 @@ header .slide-box .slide {
   background-size: cover;
   background-repeat: no-repeat;
 }
+header .slide-box .slide h3 {
+  font-size: 3.5rem;
+  color: #F7F5F2;
+}
+header .slide-box .slide p {
+  font-size: 2rem;
+  color: #F7F5F2;
+}
 header .slide-box .slide-one {
-  background-image: url("/img/clothes.jpg");
+  background-image: url("https://img-ovh-cloud.zszywka.pl/1/0660/8074-kwiatki.jpg");
 }
 
-section.newproducts h2 {
-  margin-top: 10px;
-}
 section.newproducts .products-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 section.newproducts .products-container .product-box {
+  flex-basis: calc(100% - 0px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 20px 10px;
+  height: 250px;
   background-color: aquamarine;
-  margin: 10px;
-  width: 70px;
-  height: 70px;
+}
+section.newproducts .products-container .product-box .product-img {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/MQD83.jpg);
+}
+section.newproducts .products-container .product-box .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  section.newproducts .products-container {
+    background-color: tomato;
+  }
+  section.newproducts .products-container .product-box {
+    flex-basis: calc(50% - 60px);
+  }
+}
+@media (min-width: 992px) {
+  section.newproducts .products-container {
+    background-color: blue;
+  }
+  section.newproducts .products-container .product-box {
+    max-width: 300px;
+    flex-basis: calc(33.3% - 60px);
+  }
 }/*# sourceMappingURL=main.css.map */
