@@ -25,13 +25,16 @@ body {
 }
 
 section {
-	margin: 20px 30px;
-
 	h2 {
 		margin-top: 10px;
 		text-align: center;
 		font-size: 2.7rem;
 	  }
+}
+.wrapper {
+	max-width: 1200px;
+  	margin: 0 auto;
+  	padding: 20px; 
 }
 
 .nav {
@@ -155,6 +158,93 @@ section.newproducts {
 		// }
     }
 }
+section.bag {
+	padding-top:60px;
+	.bagbox {
+		padding: 30px;
+		font-size: 2rem;
+		.box {
+			width: 100%;
+			background-color: $field-bg-color;
+			margin-top: 20px;
+			padding: 20px;
+			
+		}
+		.bagbox-order {
+			background-color: $field-bg-color;
+			.order {
+				margin: 20px 0;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				height: 200px;
+				background-color: $pure-white;
+				.order-img {
+					margin: 15px;
+					width: 150px;
+					height: 150px;
+					border-radius: 8px;
+					background-image: url(../img/MQD83.jpg);
+					background-size: cover;
+					background-position: center;
+				}
+				.order-info {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: left;
+					margin-right: 5px;
+					padding: 20px 20px 20px 0;
+					width: 60%;
+					height: 200px;
+					.order-info-element {
+						padding: 10px 0;
+					}
+					select {
+						width: 20%;
+					}
+				}
+			}
+		}
+		.bagbox-delivery {
+			.delivery-date {
+				font-size: 1.5rem;
+				padding-top: 20px;
+			}
+		}
+		.bagbox-total {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.box-heading {
+				text-align: center;
+			}
+			.total {
+				padding: 0 20px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				.total-info {
+					height: 100px;
+					padding: 5px 0;
+					p {
+						padding: 3px 0;
+					}
+					.left {
+						text-align: right;
+					}
+				}
+			} 
+			.pay-btn {
+				font-size: 1.5rem;
+				padding: 10px 20px;
+				margin: 10px;
+				border: none;
+				cursor: pointer;
+			}
+		}
+	}
+}
 
 @media (min-width: 576px) {
 	section.newproducts {
@@ -177,6 +267,73 @@ section.newproducts {
 			.product-box {
 				max-width: 300px;
 				flex-basis: calc(33.3% - 60px);
+			}
+		}
+	}
+	section.bag {
+		.bagbox {
+			display: flex;
+			flex-direction: column;
+			flex-basis: calc(50% - 0px);
+			.box {
+				width: 50%;
+			}
+			.bagbox-order {
+				.order {
+					margin: 20px 0;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					height: 200px;
+					background-color: $pure-white;
+					.order-img {
+						margin: 15px;
+						width: 150px;
+						height: 150px;
+						border-radius: 8px;
+						background-image: url(../img/MQD83.jpg);
+						background-size: cover;
+						background-position: center;
+					}
+					.order-info {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: left;
+						margin-right: 5px;
+						padding: 20px 20px 20px 0;
+						width: 60%;
+						height: 200px;
+						.order-info-element {
+							padding: 10px 0;
+						}
+						select {
+							width: 20%;
+						}
+					}
+				}
+			}
+			.media-right {
+				.bagbox-total {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					.box-heading {
+						text-align: center;
+					}
+					.total {
+						padding: 0 20px;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						.total-info {
+							
+						}
+					} 
+					.pay-btn {
+						
+					}
+				}
 			}
 		}
 	}

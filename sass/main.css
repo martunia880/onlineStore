@@ -22,13 +22,16 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-section {
-  margin: 20px 30px;
-}
 section h2 {
   margin-top: 10px;
   text-align: center;
   font-size: 2.7rem;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .nav {
@@ -124,6 +127,91 @@ section.newproducts .products-container .product-box .product-info {
   margin-top: 0.8rem;
   text-align: center;
 }
+section.bag {
+  padding-top: 60px;
+}
+section.bag .bagbox {
+  padding: 30px;
+  font-size: 2rem;
+}
+section.bag .bagbox .box {
+  width: 100%;
+  background-color: #F7F5F2;
+  margin-top: 20px;
+  padding: 20px;
+}
+section.bag .bagbox .bagbox-order {
+  background-color: #F7F5F2;
+}
+section.bag .bagbox .bagbox-order .order {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 200px;
+  background-color: white;
+}
+section.bag .bagbox .bagbox-order .order .order-img {
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  background-image: url(../img/MQD83.jpg);
+  background-size: cover;
+  background-position: center;
+}
+section.bag .bagbox .bagbox-order .order .order-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-right: 5px;
+  padding: 20px 20px 20px 0;
+  width: 60%;
+  height: 200px;
+}
+section.bag .bagbox .bagbox-order .order .order-info .order-info-element {
+  padding: 10px 0;
+}
+section.bag .bagbox .bagbox-order .order .order-info select {
+  width: 20%;
+}
+section.bag .bagbox .bagbox-delivery .delivery-date {
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+section.bag .bagbox .bagbox-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.bag .bagbox .bagbox-total .box-heading {
+  text-align: center;
+}
+section.bag .bagbox .bagbox-total .total {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section.bag .bagbox .bagbox-total .total .total-info {
+  height: 100px;
+  padding: 5px 0;
+}
+section.bag .bagbox .bagbox-total .total .total-info p {
+  padding: 3px 0;
+}
+section.bag .bagbox .bagbox-total .total .total-info .left {
+  text-align: right;
+}
+section.bag .bagbox .bagbox-total .pay-btn {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   section.newproducts .products-container {
     background-color: tomato;
@@ -139,5 +227,60 @@ section.newproducts .products-container .product-box .product-info {
   section.newproducts .products-container .product-box {
     max-width: 300px;
     flex-basis: calc(33.3% - 60px);
+  }
+  section.bag .bagbox {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(50% - 0px);
+  }
+  section.bag .bagbox .box {
+    width: 50%;
+  }
+  section.bag .bagbox .bagbox-order .order {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 200px;
+    background-color: white;
+  }
+  section.bag .bagbox .bagbox-order .order .order-img {
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    background-image: url(../img/MQD83.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  section.bag .bagbox .bagbox-order .order .order-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-right: 5px;
+    padding: 20px 20px 20px 0;
+    width: 60%;
+    height: 200px;
+  }
+  section.bag .bagbox .bagbox-order .order .order-info .order-info-element {
+    padding: 10px 0;
+  }
+  section.bag .bagbox .bagbox-order .order .order-info select {
+    width: 20%;
+  }
+  section.bag .bagbox .media-right .bagbox-total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  section.bag .bagbox .media-right .bagbox-total .box-heading {
+    text-align: center;
+  }
+  section.bag .bagbox .media-right .bagbox-total .total {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=main.css.map */
