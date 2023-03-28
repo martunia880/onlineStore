@@ -431,91 +431,33 @@ section.login {
 @media screen and (min-width: 576px) {
 	section.login {
 		.form-wrapper {
-			h2 {
-				margin: 10px 0;
+			form {
+				padding: 20px 40px;
+
+				button.send {
+					margin-top: 70px;
+				}
 			}
+		}
+	}
+}
 
-			// form {
-			// 	width: 40vh;
-			// 	padding: 40px;
+@media screen and (min-width: 992px) {
+	section.login {
+		.form-wrapper {
+			form {
+				width: 50vh;
+				height: 65vh;
 
-			// 	.input-area {
-			// 		.form-box {
+				.input-area {
+					margin-top: 20px;
+				}
 
-			// 			i {
-			// 				padding-bottom: 7px;
-			// 				padding-right: 10px;
-			// 				font-size: 18px;
-			// 				color: $accent-color;
-			// 				// text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-			// 			}
-			// 			input {
-			// 				margin-left: -28px;
-			// 				padding: 7px 0;
-			// 				width: 100%;
-			// 				height: 25px;
-			// 				border: none;
-			// 				border-bottom: solid 1px $input-color;
-			// 				text-indent: 35px;
-			// 				background: none;
-			// 				outline: none;
-			// 				color: $input-color;
-			// 			}
-
-			// 			input::placeholder {
-			// 				font-size: 14px;
-			// 				padding: 7px 0;
-			// 				color: $input-color;
-			// 			}
-			// 		}
-
-			// 		.text {
-			// 			font-size: 12px;
-			// 			text-align: right;
-			// 			text-decoration: none;
-			// 		}
-			// 	}
-
-			// 	button.send {
-			// 		margin-top: 40px;
-			// 		padding: 10px 0;
-			// 		height: 40px;
-			// 		width: 100px;
-			// 		font-size: 12px;
-			// 		font-weight: bold;
-			// 		background-color: $accent-color;
-			// 		color: $font-light;
-			// 		border: none;
-			// 		border-radius: 40px;
-			// 		text-transform: uppercase;
-			// 		letter-spacing: 1.8px;
-			// 		cursor: pointer;
-			// 		transition: background-color 0.3s, transform 0.3s;
-			// 		box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
-			// 	}
-
-			// 	button.send:hover {
-			// 		background-color: $hover-color;
-			// 		transform: scale(1.05);
-			// 	}
-
-			// 	.form-switch {
-			// 		padding: 5px 0;
-			// 		margin-top: 20px;
-			// 		font-size: 14px;
-			// 		.signup-switch {
-			// 			font-weight: bold;
-			// 			cursor: pointer;
-			// 			text-decoration: none;
-			// 			color: $accent-color;
-			// 			outline: none;
-			// 			border: none;
-			// 		}
-			// 		.signup-switch:hover {
-			// 			color: $hover-color;
-			// 		}
-			// 	}
-			// }
+				button.send {
+					margin-top: 70px;
+					margin-bottom: 20px;
+				}
+			}
 		}
 	}
 }
