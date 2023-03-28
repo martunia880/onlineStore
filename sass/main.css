@@ -375,7 +375,23 @@ section.login .form-wrapper form .form-switch .signup-switch:hover {
 }
 
 @media screen and (min-width: 576px) {
-  section.login .form-wrapper h2 {
-    margin: 10px 0;
+  section.login .form-wrapper form {
+    padding: 20px 40px;
+  }
+  section.login .form-wrapper form button.send {
+    margin-top: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.login .form-wrapper form {
+    width: 50vh;
+    height: 65vh;
+  }
+  section.login .form-wrapper form .input-area {
+    margin-top: 20px;
+  }
+  section.login .form-wrapper form button.send {
+    margin-top: 70px;
+    margin-bottom: 20px;
   }
 }
