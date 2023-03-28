@@ -66,6 +66,19 @@ section h2 {
 .nav .nav-container a:hover {
   color: rgb(255, 136, 0);
 }
+.nav .nav-container .nav-icons i:hover {
+  color: rgb(255, 136, 0);
+}
+.nav .nav-container .nav-icons .magnifier {
+  cursor: pointer;
+  padding: 0 10px;
+}
+.nav .nav-container .input-serch {
+  display: none;
+  width: 200px;
+  margin: 0 5px;
+  border-radius: 20px;
+}
 
 header .slide-box {
   width: 100%;
@@ -95,6 +108,12 @@ header .slide-box .slide-one {
   background-image: url("https://img-ovh-cloud.zszywka.pl/1/0660/8074-kwiatki.jpg");
 }
 
+section.newproducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 section.newproducts .products-container {
   display: flex;
   justify-content: center;
@@ -118,7 +137,7 @@ section.newproducts .products-container .product-box .product-img {
   height: 200px;
   background-position: center;
   background-size: cover;
-  background-image: url(../img/MQD83.jpg);
+  background-image: url(../img/iszmata.webp);
 }
 section.newproducts .products-container .product-box .product-info {
   display: flex;
@@ -223,6 +242,7 @@ section.bag .bagbox .bagbox-total .pay-btn {
 @media (min-width: 992px) {
   section.newproducts .products-container {
     background-color: blue;
+    max-width: 1000px;
   }
   section.newproducts .products-container .product-box {
     max-width: 300px;

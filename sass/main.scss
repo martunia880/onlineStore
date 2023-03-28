@@ -49,7 +49,7 @@ section {
 	background-color: $field-bg-color;
 	z-index: 10;
 
-	a {
+	a{
 		padding: 0 10px;
 		color: $font-standard;
 		text-decoration: none;
@@ -71,6 +71,31 @@ section {
 
 		a:hover {
 			color: $hover-color;
+		}
+
+		
+
+		.nav-icons {
+			i:hover{
+				color: $hover-color;
+			}
+
+			.magnifier{
+				cursor: pointer;
+				padding: 0 10px;
+			}
+	
+			
+	
+			
+			
+		}
+		.input-serch{
+			display: none;
+			width: 200px;
+			margin: 0 5px;
+			border-radius: 20px
+	
 		}
 	}
 }
@@ -107,7 +132,15 @@ header {
 	}
 }
 
+
+
+
+
 section.newproducts {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
     .products-container {
         display: flex;
 		justify-content: center;
@@ -132,7 +165,7 @@ section.newproducts {
 				height: 200px;
 				background-position: center;
 				background-size: cover;
-				background-image: url(../img/MQD83.jpg);
+				background-image: url(../img/iszmata.webp);
 
 			}
 
@@ -264,6 +297,8 @@ section.bag {
 	section.newproducts {
 		.products-container {
 			background-color: blue;
+
+			max-width: 1000px;
 			.product-box {
 				max-width: 300px;
 				flex-basis: calc(33.3% - 60px);
