@@ -333,17 +333,17 @@ section.login {
 		form {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: space-around;
 			align-items: center;
 			min-height: 55vh;
 			min-width: 40vh;
-			padding: 25px;
+			padding: 30px;
 			background-color: $field-bg-color;
 			border: 1px solid #ccc;
 			border-radius: 5px;
 
 			.input-area {
-				width: 90%;
+				width: 100%;
 				.form-box {
 					width: 100%;
 					display: flex;
@@ -356,11 +356,10 @@ section.login {
 						padding-bottom: 7px;
 						padding-right: 10px;
 						color: $accent-color;
-						// text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+						font-size: 1.8rem;
 					}
 					input {
 						margin-left: -28px;
-						padding: 7px 0;
 						width: 100%;
 						height: 25px;
 						border: none;
@@ -386,7 +385,7 @@ section.login {
 			}
 
 			button.send {
-				margin-top: 40px;
+				margin-top: 50px;
 				padding: 10px 0;
 				height: 40px;
 				width: 100px;
@@ -432,11 +431,12 @@ section.login {
 	section.login {
 		.form-wrapper {
 			form {
-				padding: 20px 40px;
+				padding: 40px;
 
-				button.send {
-					margin-top: 70px;
-				}
+				// button.send {
+				// 	margin-top: 70px;
+
+				// }
 			}
 		}
 	}
@@ -446,16 +446,12 @@ section.login {
 	section.login {
 		.form-wrapper {
 			form {
+				padding: 50px;
 				width: 50vh;
 				height: 65vh;
 
 				.input-area {
 					margin-top: 20px;
-				}
-
-				button.send {
-					margin-top: 70px;
-					margin-bottom: 20px;
 				}
 			}
 		}
