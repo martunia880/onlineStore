@@ -284,17 +284,17 @@ section.login .form-wrapper form.register-form {
 section.login .form-wrapper form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   min-height: 55vh;
   min-width: 40vh;
-  padding: 25px;
+  padding: 30px;
   background-color: #F7F5F2;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 section.login .form-wrapper form .input-area {
-  width: 90%;
+  width: 100%;
 }
 section.login .form-wrapper form .input-area .form-box {
   width: 100%;
@@ -308,10 +308,10 @@ section.login .form-wrapper form .input-area .form-box i {
   padding-bottom: 7px;
   padding-right: 10px;
   color: #4682b4;
+  font-size: 1.8rem;
 }
 section.login .form-wrapper form .input-area .form-box input {
   margin-left: -28px;
-  padding: 7px 0;
   width: 100%;
   height: 25px;
   border: none;
@@ -337,7 +337,7 @@ section.login .form-wrapper form .input-area .text {
   text-decoration: none;
 }
 section.login .form-wrapper form button.send {
-  margin-top: 40px;
+  margin-top: 50px;
   padding: 10px 0;
   height: 40px;
   width: 100px;
@@ -376,22 +376,16 @@ section.login .form-wrapper form .form-switch .signup-switch:hover {
 
 @media screen and (min-width: 576px) {
   section.login .form-wrapper form {
-    padding: 20px 40px;
-  }
-  section.login .form-wrapper form button.send {
-    margin-top: 70px;
+    padding: 40px;
   }
 }
 @media screen and (min-width: 992px) {
   section.login .form-wrapper form {
+    padding: 50px;
     width: 50vh;
     height: 65vh;
   }
   section.login .form-wrapper form .input-area {
     margin-top: 20px;
-  }
-  section.login .form-wrapper form button.send {
-    margin-top: 70px;
-    margin-bottom: 20px;
   }
 }
