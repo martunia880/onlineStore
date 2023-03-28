@@ -32,7 +32,7 @@ section {
 	  }
 }
 .wrapper {
-	max-width: 1200px;
+	max-width: 1400px;
   	margin: 0 auto;
   	padding: 20px; 
 }
@@ -273,69 +273,23 @@ section.bag {
 	section.bag {
 		.bagbox {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			flex-basis: calc(50% - 0px);
 			.box {
-				width: 50%;
+				margin: 10px;
+				width: 100%;
 			}
 			.bagbox-order {
-				.order {
-					margin: 20px 0;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					height: 200px;
-					background-color: $pure-white;
-					.order-img {
-						margin: 15px;
-						width: 150px;
-						height: 150px;
-						border-radius: 8px;
-						background-image: url(../img/MQD83.jpg);
-						background-size: cover;
-						background-position: center;
-					}
-					.order-info {
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						align-items: left;
-						margin-right: 5px;
-						padding: 20px 20px 20px 0;
-						width: 60%;
-						height: 200px;
-						.order-info-element {
-							padding: 10px 0;
-						}
-						select {
-							width: 20%;
-						}
-					}
-				}
+				margin-left: 0;
+				width: 50%;
 			}
 			.media-right {
-				.bagbox-total {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					.box-heading {
-						text-align: center;
-					}
-					.total {
-						padding: 0 20px;
-						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-						.total-info {
-							
-						}
-					} 
-					.pay-btn {
-						
-					}
-				}
+				width: 50%;
+				overflow: hidden;
 			}
 		}
 	}
 }
+
+
 
