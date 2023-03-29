@@ -49,26 +49,31 @@
                 </div>
                 <button class="send">Log in</button>
 
-                <p class="form-switch">Don't have an account? <a href="#" class="signup-switch">Sign up!</a></p>
+                <p class="form-switch">Don't have an account? <a href="#" class="change-form signup-switch">Sign up!</a>
+                </p>
             </form>
 
-            <form class="register-form">
+            <form class="register-form hide">
                 <h2>Register</h2>
-                <div class="form-box">
-                    <i class="fa-solid fa-envelope"></i>
-                    <input type="email" id="email" placeholder="Enter your e-mail" required>
-                </div>
-                <div class="form-box">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="password" placeholder="Enter your password" required>
-                </div>
-                <div class="form-box">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="password" placeholder="Repeat your password" required>
+                <div class="input-area">
+                    <div class="form-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your e-mail" required>
+                    </div>
+                    <div class="form-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="Repeat your password" required>
+                    </div>
+                    <div class="text"><a href="#">Forgot password?</a></div>
                 </div>
                 <button class="send">Register</button>
 
-                <p class="form-switch">Already have an account? <a href="#" class="signup-switch">Log in!</a></p>
+                <p class="form-switch">Don't have an account? <a href="#" class="change-form login-switch">Log in!</a>
+                </p>
             </form>
         </div>
     </section>
@@ -81,6 +86,8 @@
             </span>
         </p>
     </footer>
+
+    <script src="scripts/spript2.js"></script>
 </body>
 
 </html>

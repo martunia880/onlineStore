@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: #DFDFDE;
+  background-color: #e9ecef;
   color: #222;
   font-family: "Montserrat", sans-serif;
 }
@@ -42,7 +42,7 @@ section h2 {
   height: 60px;
   padding: 10px 20px;
   font-size: 1.8rem;
-  background-color: #F7F5F2;
+  background-color: #f7f5f2;
   z-index: 10;
 }
 .nav a {
@@ -102,11 +102,11 @@ header .slide-box .slide {
 }
 header .slide-box .slide h3 {
   font-size: 3.5rem;
-  color: #F7F5F2;
+  color: #f7f5f2;
 }
 header .slide-box .slide p {
   font-size: 2rem;
-  color: #F7F5F2;
+  color: #f7f5f2;
 }
 header .slide-box .slide-one {
   background-image: url("https://img-ovh-cloud.zszywka.pl/1/0660/8074-kwiatki.jpg");
@@ -161,12 +161,12 @@ section.bag .bagbox {
 }
 section.bag .bagbox .box {
   width: 100%;
-  background-color: #F7F5F2;
+  background-color: #f7f5f2;
   margin-top: 20px;
   padding: 20px;
 }
 section.bag .bagbox .bagbox-order {
-  background-color: #F7F5F2;
+  background-color: #f7f5f2;
 }
 section.bag .bagbox .bagbox-order .order {
   margin: 20px 0;
@@ -281,10 +281,21 @@ section.login .form-wrapper {
   height: 100vh;
 }
 section.login .form-wrapper h2 {
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
 }
-section.login .form-wrapper form.register-form {
-  display: none;
+section.login .form-wrapper .login-form {
+  animation: show 0.5s ease-in-out forwards;
+}
+section.login .form-wrapper .register-form {
+  animation: show 0.5s ease-in-out forwards;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 section.login .form-wrapper form {
   display: flex;
@@ -294,19 +305,18 @@ section.login .form-wrapper form {
   min-height: 55vh;
   min-width: 40vh;
   padding: 30px;
-  background-color: #F7F5F2;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #f7f5f2;
+  border-radius: 10px;
 }
 section.login .form-wrapper form .input-area {
   width: 100%;
 }
 section.login .form-wrapper form .input-area .form-box {
+  padding: 10px 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
   margin: 20px 0;
 }
 section.login .form-wrapper form .input-area .form-box i {
@@ -349,7 +359,7 @@ section.login .form-wrapper form button.send {
   font-size: 12px;
   font-weight: bold;
   background-color: #4682b4;
-  color: #F7F5F2;
+  color: #f7f5f2;
   border: none;
   border-radius: 40px;
   text-transform: uppercase;
@@ -367,7 +377,7 @@ section.login .form-wrapper form .form-switch {
   margin-top: 20px;
   font-size: 14px;
 }
-section.login .form-wrapper form .form-switch .signup-switch {
+section.login .form-wrapper form .form-switch .change-form {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
@@ -375,8 +385,11 @@ section.login .form-wrapper form .form-switch .signup-switch {
   outline: none;
   border: none;
 }
-section.login .form-wrapper form .form-switch .signup-switch:hover {
+section.login .form-wrapper form .form-switch .change-form:hover {
   color: rgb(255, 136, 0);
+}
+section.login .form-wrapper .hide {
+  display: none;
 }
 
 @media screen and (min-width: 576px) {
@@ -393,4 +406,32 @@ section.login .form-wrapper form .form-switch .signup-switch:hover {
   section.login .form-wrapper form .input-area {
     margin-top: 20px;
   }
+  section.login .form-wrapper form .input-area .form-box input {
+    margin-left: -30px;
+    height: 40px;
+    font-size: 20px;
+  }
+  section.login .form-wrapper form .input-area .form-box input::-moz-placeholder {
+    font-size: 20px;
+  }
+  section.login .form-wrapper form .input-area .form-box input::placeholder {
+    font-size: 20px;
+  }
+  section.login .form-wrapper form .input-area .form-box i {
+    font-size: 22px;
+  }
+  section.login .form-wrapper form .input-area .text {
+    font-size: 16px;
+  }
+  section.login .form-wrapper form button.send {
+    width: 120px;
+    height: 50px;
+  }
+  section.login .form-wrapper form .form-switch {
+    font-size: 16px;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 0;
 }

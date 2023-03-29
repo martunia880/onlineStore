@@ -335,11 +335,24 @@ section.login {
 		height: 100vh;
 
 		h2 {
-			margin: 10px 0;
+			margin: 10px 0 20px 0;
 		}
 
-		form.register-form {
-			display: none;
+		.login-form {
+			animation: show 0.5s ease-in-out forwards;
+		}
+
+		.register-form {
+			animation: show 0.5s ease-in-out forwards;
+		}
+
+		@keyframes show{
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
 		}
 
 		form {
@@ -351,17 +364,16 @@ section.login {
 			min-width: 40vh;
 			padding: 30px;
 			background-color: $field-bg-color;
-			border: 1px solid #ccc;
-			border-radius: 5px;
+			border-radius: 10px;
 
 			.input-area {
 				width: 100%;
 				.form-box {
+					padding: 10px 0;
 					width: 100%;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					height: 50px;
 					margin: 20px 0;
 
 					i {
@@ -423,7 +435,7 @@ section.login {
 				padding: 5px 0;
 				margin-top: 20px;
 				font-size: 14px;
-				.signup-switch {
+				.change-form {
 					font-weight: bold;
 					cursor: pointer;
 					text-decoration: none;
@@ -431,10 +443,14 @@ section.login {
 					outline: none;
 					border: none;
 				}
-				.signup-switch:hover {
+				.change-form:hover {
 					color: $hover-color;
 				}
 			}
+		}
+
+		.hide {
+			display: none;
 		}
 	}
 }
@@ -464,8 +480,40 @@ section.login {
 
 				.input-area {
 					margin-top: 20px;
+
+					.form-box {
+						input {
+							margin-left: -30px;
+							height: 40px;
+							font-size: 20px;
+						}
+						input::placeholder {
+							font-size: 20px;
+						}
+						i {
+							font-size: 22px;
+						}
+					}
+
+					.text {
+						font-size: 16px;
+					}
+				}
+
+				button.send {
+					width: 120px;
+					height: 50px;
+				}
+
+				.form-switch {
+					font-size: 16px;
 				}
 			}
 		}
 	}
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
 }
