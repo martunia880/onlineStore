@@ -31,11 +31,11 @@ section {
 		margin-top: 10px;
 		text-align: center;
 		font-size: 2.7rem;
-	  }
+	}
 }
 
 .nav {
-    position: fixed;
+	position: fixed;
 	display: flex;
 	align-items: center;
 	// justify-content: center;
@@ -46,7 +46,7 @@ section {
 	background-color: $field-bg-color;
 	z-index: 10;
 
-	a{
+	a {
 		padding: 0 10px;
 		color: $font-standard;
 		text-decoration: none;
@@ -70,29 +70,26 @@ section {
 			color: $hover-color;
 		}
 
-		
-
 		.nav-icons {
-			i:hover{
+			i:hover {
 				color: $hover-color;
 			}
 
-			.magnifier{
+			.magnifier {
 				cursor: pointer;
 				padding: 0 10px;
 			}
-	
-			
-	
-			
-			
 		}
-		.input-serch{
+		.input-serch {
 			display: none;
 			width: 200px;
 			margin: 0 5px;
-			border-radius: 20px
-	
+			border-radius: 20px;
+			margin: 10px;
+		}
+
+		.input-serch[type='text'] {
+			padding: 2px 8px; /* przesuń pole tekstowe w prawo o 20 pikseli */
 		}
 	}
 }
@@ -129,22 +126,18 @@ header {
 	}
 }
 
-
-
-
-
 section.newproducts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.products-container {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-    .products-container {
-        display: flex;
-		justify-content: center;
-		align-items: center;
-        flex-wrap: wrap;
+		flex-wrap: wrap;
 		// background-color: violet;
-        .product-box {
+		.product-box {
 			flex-basis: calc(100% - 0px);
 			display: flex;
 			flex-direction: column;
@@ -152,10 +145,10 @@ section.newproducts {
 			align-items: center;
 			min-width: 200px;
 			max-width: 300px;
-            margin: 20px 10px;
-            height: 250px;
+			margin: 20px 10px;
+			height: 250px;
 			// padding: 15px;
-            background-color: aquamarine;
+			background-color: aquamarine;
 
 			.product-img {
 				width: 200px;
@@ -163,7 +156,6 @@ section.newproducts {
 				background-position: center;
 				background-size: cover;
 				background-image: url(../img/iszmata.webp);
-
 			}
 
 			.product-info {
@@ -175,24 +167,22 @@ section.newproducts {
 				text-align: center;
 
 				.product-name {
-
 				}
 
 				.product-price {
-
 				}
 			}
-        }
+		}
 		// .no-display {
 		// 	display: none;
 		// }
-    }
+	}
 }
 
 @media (min-width: 576px) {
 	section.newproducts {
 		.products-container {
-		background-color: tomato;
+			background-color: tomato;
 			.product-box {
 				flex-basis: calc(50% - 60px);
 			}
@@ -216,4 +206,3 @@ section.newproducts {
 		}
 	}
 }
-
