@@ -25,13 +25,17 @@ body {
 }
 
 section {
-	margin: 20px 30px;
-
 	h2 {
-		margin-top: 10px;
+		// margin-top: 10px;
 		text-align: center;
 		font-size: 2.7rem;
 	}
+
+}
+.wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 .nav {
@@ -90,6 +94,7 @@ section {
 
 		.input-serch[type='text'] {
 			padding: 2px 8px; /* przesuń pole tekstowe w prawo o 20 pikseli */
+
 		}
 	}
 }
@@ -133,11 +138,14 @@ section.newproducts {
 	align-items: center;
 	.products-container {
 		display: flex;
+		padding: 40px;
+
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
 		// background-color: violet;
 		.product-box {
+			margin: 10px 30px;
 			flex-basis: calc(100% - 0px);
 			display: flex;
 			flex-direction: column;
@@ -145,10 +153,11 @@ section.newproducts {
 			align-items: center;
 			min-width: 200px;
 			max-width: 300px;
-			margin: 20px 10px;
+
 			height: 250px;
-			// padding: 15px;
-			background-color: aquamarine;
+			background-color: $pure-white;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
 
 			.product-img {
 				width: 200px;
@@ -177,14 +186,101 @@ section.newproducts {
 		// 	display: none;
 		// }
 	}
+
+}
+
+section.bag {
+	padding-top: 60px;
+	.bagbox {
+		padding: 30px;
+		font-size: 2rem;
+		.box {
+			width: 100%;
+			background-color: $field-bg-color;
+			margin-top: 20px;
+			padding: 20px;
+		}
+		.bagbox-order {
+			background-color: $field-bg-color;
+			.order {
+				margin: 20px 0;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				height: 200px;
+				background-color: $pure-white;
+				.order-img {
+					margin: 15px;
+					width: 150px;
+					height: 150px;
+					border-radius: 8px;
+					background-image: url(../img/MQD83.jpg);
+					background-size: cover;
+					background-position: center;
+				}
+				.order-info {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: left;
+					margin-right: 5px;
+					padding: 20px 20px 20px 0;
+					width: 60%;
+					height: 200px;
+					.order-info-element {
+						padding: 10px 0;
+					}
+					select {
+						width: 20%;
+					}
+				}
+			}
+		}
+		.bagbox-delivery {
+			.delivery-date {
+				font-size: 1.5rem;
+				padding-top: 20px;
+			}
+		}
+		.bagbox-total {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.box-heading {
+				text-align: center;
+			}
+			.total {
+				padding: 0 20px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				.total-info {
+					height: 100px;
+					padding: 5px 0;
+					p {
+						padding: 3px 0;
+					}
+					.left {
+						text-align: right;
+					}
+				}
+			}
+			.pay-btn {
+				font-size: 1.5rem;
+				padding: 10px 20px;
+				margin: 10px;
+				border: none;
+				cursor: pointer;
+			}
+		}
+	}
 }
 
 @media (min-width: 576px) {
 	section.newproducts {
 		.products-container {
-			background-color: tomato;
 			.product-box {
-				flex-basis: calc(50% - 60px);
+				flex-basis: calc(50% - 0px);
 			}
 			// .no-display {
 			// 	display: block;
@@ -196,12 +292,179 @@ section.newproducts {
 @media (min-width: 992px) {
 	section.newproducts {
 		.products-container {
-			background-color: blue;
-
 			max-width: 1000px;
 			.product-box {
 				max-width: 300px;
 				flex-basis: calc(33.3% - 60px);
+			}
+		}
+	}
+	section.bag {
+		.bagbox {
+			display: flex;
+			flex-direction: row;
+			flex-basis: calc(50% - 0px);
+			.box {
+				margin: 10px;
+				width: 100%;
+			}
+			.bagbox-order {
+				margin-left: 0;
+				width: 50%;
+			}
+			.media-right {
+				width: 50%;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+
+/* ----- LOGIN ------- */
+
+section.login {
+	max-height: 100vh;
+	overflow: hidden;
+	font-size: 1.8vh;
+
+	.form-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+
+		h2 {
+			margin: 10px 0;
+		}
+
+		form.register-form {
+			display: none;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			min-height: 55vh;
+			min-width: 40vh;
+			padding: 30px;
+			background-color: $field-bg-color;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+
+			.input-area {
+				width: 100%;
+				.form-box {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 50px;
+					margin: 20px 0;
+
+					i {
+						padding-bottom: 7px;
+						padding-right: 10px;
+						color: $accent-color;
+						font-size: 1.8rem;
+					}
+					input {
+						margin-left: -28px;
+						width: 100%;
+						height: 25px;
+						border: none;
+						border-bottom: solid 1px $input-color;
+						text-indent: 35px;
+						background: none;
+						outline: none;
+						color: $input-color;
+					}
+
+					input::placeholder {
+						font-size: 14px;
+						padding: 7px 0;
+						color: $input-color;
+					}
+				}
+
+				.text {
+					font-size: 12px;
+					text-align: right;
+					text-decoration: none;
+				}
+			}
+
+			button.send {
+				margin-top: 50px;
+				padding: 10px 0;
+				height: 40px;
+				width: 100px;
+				font-size: 12px;
+				font-weight: bold;
+				background-color: $accent-color;
+				color: $font-light;
+				border: none;
+				border-radius: 40px;
+				text-transform: uppercase;
+				letter-spacing: 1.8px;
+				cursor: pointer;
+				transition: background-color 0.3s, transform 0.3s;
+				box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+			}
+
+			button.send:hover {
+				background-color: $hover-color;
+				transform: scale(1.05);
+			}
+
+			.form-switch {
+				padding: 5px 0;
+				margin-top: 20px;
+				font-size: 14px;
+				.signup-switch {
+					font-weight: bold;
+					cursor: pointer;
+					text-decoration: none;
+					color: $accent-color;
+					outline: none;
+					border: none;
+				}
+				.signup-switch:hover {
+					color: $hover-color;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 576px) {
+	section.login {
+		.form-wrapper {
+			form {
+				padding: 40px;
+
+				// button.send {
+				// 	margin-top: 70px;
+
+				// }
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	section.login {
+		.form-wrapper {
+			form {
+				padding: 50px;
+				width: 50vh;
+				height: 65vh;
+
+				.input-area {
+					margin-top: 20px;
+				}
 			}
 		}
 	}
