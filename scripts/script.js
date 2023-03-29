@@ -13,4 +13,5 @@ function showInput() {
 
 function hideInput() {
     document.getElementById("input-serch").style.display = "none";
-}
+} 
+

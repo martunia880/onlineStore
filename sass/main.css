@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -77,6 +78,10 @@ section h2 {
   width: 200px;
   margin: 0 5px;
   border-radius: 20px;
+  margin: 10px;
+}
+.nav .nav-container .input-serch[type=text] {
+  padding: 2px 8px; /* przesuń pole tekstowe w prawo o 20 pikseli */
 }
 
 header .slide-box {
