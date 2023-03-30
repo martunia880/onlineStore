@@ -1,7 +1,7 @@
 require('../../utils/connectDb');
 const Product = require('../../models/Product');
 
-export const getProduct = async (productId) => {
+const getProduct = async (productId) => {
   try {
     const product = await Product.findById(productId);
     console.log(product);

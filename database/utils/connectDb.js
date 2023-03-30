@@ -11,7 +11,6 @@ const database = (module.exports = () => {
 	try {
 		mongoose.connect(
 			'mongodb+srv://damianbugaj6:hubsas-wikcyf-2Nocqo@onlinestore.x6wtlxd.mongodb.net/?retryWrites=true&w=majority',
-			//fIbbug-cohwyt-2fiwni
 			connectionParams
 		);
 		console.log('Database connected succesfully');
@@ -23,7 +22,10 @@ const database = (module.exports = () => {
 
 database();
 
-app.listen(3000, () => {
-	console.log('Server is running on port 3000');
+
+app.listen(5500, () => {
+	console.log('Server is running on port 5500');
 });
+
+module.exports = app;
 
