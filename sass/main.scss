@@ -336,6 +336,7 @@ section.login {
 
 		h2 {
 			margin: 10px 0 20px 0;
+			text-decoration: underline;
 		}
 
 		.login-form {
@@ -368,6 +369,7 @@ section.login {
 
 			.input-area {
 				width: 100%;
+				max-width: 350px;
 				.form-box {
 					padding: 10px 0;
 					width: 100%;
