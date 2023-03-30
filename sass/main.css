@@ -44,6 +44,7 @@ section h2 {
   font-size: 1.8rem;
   background-color: #f7f5f2;
   z-index: 10;
+  box-shadow: 1px 1px 5px #c0c9d1;
 }
 .nav a {
   padding: 0 10px;
@@ -281,7 +282,7 @@ section.login .form-wrapper {
   height: 100vh;
 }
 section.login .form-wrapper h2 {
-  margin: 10px 0 20px 0;
+  margin: 10px 0 10px 0;
   text-decoration: underline;
 }
 section.login .form-wrapper .login-form {
@@ -308,13 +309,16 @@ section.login .form-wrapper form {
   padding: 30px;
   background-color: #f7f5f2;
   border-radius: 10px;
+  box-shadow: 1px 1px 5px #c0c9d1;
 }
 section.login .form-wrapper form .input-area {
   width: 100%;
   max-width: 350px;
+  min-height: 270px;
+  padding-bottom: 40px;
 }
 section.login .form-wrapper form .input-area .form-box {
-  padding: 10px 0;
+  padding: 10px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -351,10 +355,12 @@ section.login .form-wrapper form .input-area .form-box input::placeholder {
 section.login .form-wrapper form .input-area .text {
   font-size: 12px;
   text-align: right;
+}
+section.login .form-wrapper form .input-area .text a {
   text-decoration: none;
+  color: #4682b4;
 }
 section.login .form-wrapper form button.send {
-  margin-top: 50px;
   padding: 10px 0;
   height: 40px;
   width: 100px;

@@ -30,7 +30,6 @@ section {
 		text-align: center;
 		font-size: 2.7rem;
 	}
-
 }
 .wrapper {
 	max-width: 1400px;
@@ -49,6 +48,7 @@ section {
 	font-size: 1.8rem;
 	background-color: $field-bg-color;
 	z-index: 10;
+	box-shadow: 1px 1px 5px $box-shadow-color;
 
 	a {
 		padding: 0 10px;
@@ -65,6 +65,7 @@ section {
 		align-items: center;
 		width: 100%;
 		height: 100%;
+		
 
 		.nav-links {
 			padding-right: 25px;
@@ -94,7 +95,6 @@ section {
 
 		.input-serch[type='text'] {
 			padding: 2px 8px; /* przesuń pole tekstowe w prawo o 20 pikseli */
-
 		}
 	}
 }
@@ -158,7 +158,6 @@ section.newproducts {
 			background-color: $pure-white;
 			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 
-
 			.product-img {
 				width: 200px;
 				height: 200px;
@@ -186,7 +185,6 @@ section.newproducts {
 		// 	display: none;
 		// }
 	}
-
 }
 
 section.bag {
@@ -320,7 +318,6 @@ section.bag {
 	}
 }
 
-
 /* ----- LOGIN ------- */
 
 section.login {
@@ -335,7 +332,7 @@ section.login {
 		height: 100vh;
 
 		h2 {
-			margin: 10px 0 20px 0;
+			margin: 10px 0 10px 0;
 			text-decoration: underline;
 		}
 
@@ -347,7 +344,7 @@ section.login {
 			animation: show 0.5s ease-in-out forwards;
 		}
 
-		@keyframes show{
+		@keyframes show {
 			0% {
 				opacity: 0;
 			}
@@ -366,12 +363,15 @@ section.login {
 			padding: 30px;
 			background-color: $field-bg-color;
 			border-radius: 10px;
+			box-shadow: 1px 1px 5px $box-shadow-color;
 
 			.input-area {
 				width: 100%;
 				max-width: 350px;
+				min-height: 270px;
+				padding-bottom: 40px;
 				.form-box {
-					padding: 10px 0;
+					padding: 10px;
 					width: 100%;
 					display: flex;
 					justify-content: center;
@@ -406,12 +406,15 @@ section.login {
 				.text {
 					font-size: 12px;
 					text-align: right;
-					text-decoration: none;
+					a {
+						text-decoration: none;
+						color: $accent-color;
+					}
 				}
 			}
 
 			button.send {
-				margin-top: 50px;
+				// margin-top: 50px;
 				padding: 10px 0;
 				height: 40px;
 				width: 100px;
