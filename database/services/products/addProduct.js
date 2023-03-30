@@ -1,5 +1,5 @@
 require('../../utils/connectDb');
-const Product = require('../../models/Product');
+const Product = require('../../models/product');
 
 const createProduct = async (data) => {
   try {
@@ -11,7 +11,7 @@ const createProduct = async (data) => {
   }
 };
 
-export function addProduct(name, description, price, category) {
+function addProduct(name, description, price, category) {
     createProduct({
         name: name,
         description: description,

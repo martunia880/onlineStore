@@ -1,5 +1,7 @@
 require('../../utils/connectDb');
+const express = require('express');
 const User = require('../../models/user');
+const app = require('../../utils/connectDb');
 
 const createuser = async (data) => {
 	try {
@@ -11,32 +13,19 @@ const createuser = async (data) => {
 	}
 };
 
-
-
 function addUser(name, email, password) {
-  createuser({
-    name: name,
-    email: email,
-    password: password
-  });
+	createuser({
+		name: name,
+		email: email,
+		password: password,
+	});
 }
 
-addUser('Bartek34', 'trytytek6@icloud.com', 'LubczykKwitnący');
+app.use(express.urlencoded({ extended: true }));
 
-// async function getAllUsers() {
-//   const MongoClient = require('mongodb').MongoClient;
-//   const uri = 'mongodb://localhost:27017'; // Adres URL serwera MongoDB
-//   const client = new MongoClient(uri);
+module.exports = {
+	app,
+	addUser,
+};
 
-//   try {
-//     await client.connect();
-//     const database = client.db('mydatabase'); // Nazwa bazy danych
-//     const collection = database.collection('users'); // Nazwa kolekcji zawierającej użytkowników
-//     const users = await collection.find({}).toArray();
-//     return users;
-//   } catch (error) {
-//     console.error(error);
-//   } finally {
-//     await client.close();
-//   }
-// }
+// addUser('damian','damy3@wp.pl','Haseleczko23');
