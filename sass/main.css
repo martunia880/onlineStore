@@ -282,6 +282,7 @@ section.login .form-wrapper {
 }
 section.login .form-wrapper h2 {
   margin: 10px 0 20px 0;
+  text-decoration: underline;
 }
 section.login .form-wrapper .login-form {
   animation: show 0.5s ease-in-out forwards;
@@ -310,6 +311,7 @@ section.login .form-wrapper form {
 }
 section.login .form-wrapper form .input-area {
   width: 100%;
+  max-width: 350px;
 }
 section.login .form-wrapper form .input-area .form-box {
   padding: 10px 0;
