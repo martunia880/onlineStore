@@ -48,6 +48,7 @@ section {
 	font-size: 1.8rem;
 	background-color: $field-bg-color;
 	z-index: 10;
+	box-shadow: 1px 1px 5px $box-shadow-color;
 
 	a {
 		padding: 0 10px;
@@ -64,6 +65,7 @@ section {
 		align-items: center;
 		width: 100%;
 		height: 100%;
+		
 
 		.nav-links {
 			padding-right: 25px;
@@ -88,6 +90,11 @@ section {
 			width: 200px;
 			margin: 0 5px;
 			border-radius: 20px;
+			margin: 10px;
+		}
+
+		.input-serch[type='text'] {
+			padding: 2px 8px; /* przesuń pole tekstowe w prawo o 20 pikseli */
 		}
 	}
 }
@@ -132,6 +139,7 @@ section.newproducts {
 	.products-container {
 		display: flex;
 		padding: 40px;
+
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
@@ -145,6 +153,7 @@ section.newproducts {
 			align-items: center;
 			min-width: 200px;
 			max-width: 300px;
+
 			height: 250px;
 			background-color: $pure-white;
 			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -340,11 +349,25 @@ section.login {
 		height: 100vh;
 
 		h2 {
-			margin: 10px 0;
+			margin: 10px 0 10px 0;
+			text-decoration: underline;
 		}
 
-		form.register-form {
-			display: none;
+		.login-form {
+			animation: show 0.5s ease-in-out forwards;
+		}
+
+		.register-form {
+			animation: show 0.5s ease-in-out forwards;
+		}
+
+		@keyframes show {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
 		}
 
 		form {
@@ -356,17 +379,20 @@ section.login {
 			min-width: 40vh;
 			padding: 30px;
 			background-color: $field-bg-color;
-			border: 1px solid #ccc;
-			border-radius: 5px;
+			border-radius: 10px;
+			box-shadow: 1px 1px 5px $box-shadow-color;
 
 			.input-area {
 				width: 100%;
+				max-width: 350px;
+				min-height: 270px;
+				padding-bottom: 40px;
 				.form-box {
+					padding: 10px;
 					width: 100%;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					height: 50px;
 					margin: 20px 0;
 
 					i {
@@ -397,12 +423,15 @@ section.login {
 				.text {
 					font-size: 12px;
 					text-align: right;
-					text-decoration: none;
+					a {
+						text-decoration: none;
+						color: $accent-color;
+					}
 				}
 			}
 
 			button.send {
-				margin-top: 50px;
+				// margin-top: 50px;
 				padding: 10px 0;
 				height: 40px;
 				width: 100px;
@@ -428,7 +457,7 @@ section.login {
 				padding: 5px 0;
 				margin-top: 20px;
 				font-size: 14px;
-				.signup-switch {
+				.change-form {
 					font-weight: bold;
 					cursor: pointer;
 					text-decoration: none;
@@ -436,10 +465,14 @@ section.login {
 					outline: none;
 					border: none;
 				}
-				.signup-switch:hover {
+				.change-form:hover {
 					color: $hover-color;
 				}
 			}
+		}
+
+		.hide {
+			display: none;
 		}
 	}
 }
@@ -469,8 +502,40 @@ section.login {
 
 				.input-area {
 					margin-top: 20px;
+
+					.form-box {
+						input {
+							margin-left: -30px;
+							height: 40px;
+							font-size: 20px;
+						}
+						input::placeholder {
+							font-size: 20px;
+						}
+						i {
+							font-size: 22px;
+						}
+					}
+
+					.text {
+						font-size: 16px;
+					}
+				}
+
+				button.send {
+					width: 120px;
+					height: 50px;
+				}
+
+				.form-switch {
+					font-size: 16px;
 				}
 			}
 		}
 	}
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
 }
