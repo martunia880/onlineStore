@@ -13,9 +13,9 @@ const createuser = async (data) => {
 	}
 };
 
-function addUser(name, email, password) {
+function addUser(email, password) {
 	createuser({
-		name: name,
+		// name: name,
 		email: email,
 		password: password,
 	});
