@@ -232,6 +232,23 @@ section.bag .bagbox .bagbox-total .pay-btn {
   cursor: pointer;
 }
 
+section.account {
+  padding-top: 60px;
+}
+section.account .personal-details {
+  padding: 30px;
+  font-size: 2rem;
+}
+section.account .personal-details .personal-details {
+  margin-bottom: 20px;
+}
+section.account .personal-details .personal-details .personal-detail {
+  margin-bottom: 15px;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 576px) {
   section.newproducts .products-container .product-box {
     flex-basis: calc(50% - 0px);
@@ -388,4 +405,4 @@ section.login .form-wrapper form .form-switch .signup-switch:hover {
   section.login .form-wrapper form .input-area {
     margin-top: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
