@@ -17,6 +17,10 @@ const productSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true
+  },
+  photoPath: {
+    type: String,
+    required: true
   }
 });
 
