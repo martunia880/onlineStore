@@ -11,16 +11,17 @@ const createProduct = async (data) => {
   }
 };
 
-function addProduct(name, description, price, category) {
+function addProduct(name, description, price, category, photoPath) {
     createProduct({
         name: name,
         description: description,
         price: price,
-        category: category
+        category: category,
+        photoPath: photoPath
       });
   }
 
-  addProduct('Klawiatura mechaniczna', 'Klawiatura z mechanicznymi przełącznikami', 250, 'Elektronika')
+  addProduct('Klawiatura mechaniczna', 'Klawiatura z mechanicznymi przełącznikami', 250, 'Elektronika','<path>')
 
 //   createProduct({
 //     name: 'Klawiatura mechaniczna',

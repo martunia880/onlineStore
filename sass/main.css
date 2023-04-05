@@ -175,6 +175,75 @@ section.newproducts .products-container .product-box .product-info {
   margin-top: 0.8rem;
   text-align: center;
 }
+section.products {
+  margin-bottom: 60px;
+  padding: 70px 100px;
+}
+section.products h2 {
+  margin-bottom: 50px;
+}
+section.products .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 100px;
+}
+section.products .products-container .product-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #f7f5f2;
+  box-shadow: 1px 1px 5px #c0c9d1;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+section.products .products-container .product-box .product-img img {
+  width: 300px;
+  height: 300px;
+}
+section.products .products-container .product-box .product-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 100%;
+}
+section.products .products-container .product-box .product-info h4.product-name {
+  padding: 10px 0;
+  font-size: 20px;
+}
+section.products .products-container .product-box .product-info .product-rating {
+  font-size: 20px;
+}
+section.products .products-container .product-box .product-info .product-price {
+  font-size: 25px;
+  padding: 10px 0;
+}
+section.products .products-container .product-box .product-info button.add-product {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background-color: #4682b4;
+  box-shadow: 1px 1px 5px #c0c9d1;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+section.products .products-container .product-box .product-info button.add-product:hover {
+  background-color: #325f85;
+  transform: scale(1.05);
+}
+section.products .products-container .product-box:hover {
+  transform: scale(1.05);
+}
+
 section.bag {
   padding-top: 60px;
 }
@@ -564,4 +633,5 @@ section.login .form-wrapper .hide {
 footer {
   position: absolute;
   bottom: 0;
-}/*# sourceMappingURL=main.css.map */
+}
+
