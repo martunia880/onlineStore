@@ -206,6 +206,74 @@ section.newproducts {
 	}
 }
 
+section.newsletter {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: #04165e;
+	background-repeat: no-repeat;
+	background-position: 20% 30%;
+	margin: 0;
+	padding: 40px 100px 40px 150px;
+
+	.newsletter-text {
+		h4 {
+			font-size: 22px;
+			font-weight: 700;
+			color: #fff;
+			margin: 5px;
+		}
+	
+		p {
+			font-size: 14px;
+			font-weight: 600;
+			color: #818ea0;
+			margin: 5px;
+	
+			span {
+				color: #ffbe27;
+			}
+		}
+	
+	}
+
+	.newsletter-form {
+		display: flex;
+		width: 40%;
+
+		input  {
+			height: 45px;
+			width: 100%;
+			font-size: 14px;
+			padding: 0 10px;
+			border: 1px solid transparent;
+			border-radius: 4px 0 0 4px;
+			outline: none;
+		}
+	
+		button {
+			height: 45px;
+			font-size: 14px;
+			font-weight: 600;
+			padding: 0 30px;
+			background-color: #1bb57fbe;
+			color: #fff;
+			white-space: nowrap;
+			border-radius: 0 4px 4px 0;
+			cursor: pointer;
+			border: none;
+			outline: none;
+			transition: 0.2s;
+		}
+
+		
+		button:hover {
+			padding: 0 35px;
+		}
+	}
+}
+
 section.products {
 	margin-bottom: 60px;
 	padding: 70px 100px;
@@ -714,7 +782,7 @@ section.login {
 					}
 				}
 
-				button.send {
+				button {
 					width: 120px;
 					height: 50px;
 				}
