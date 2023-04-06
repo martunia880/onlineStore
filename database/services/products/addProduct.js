@@ -1,3 +1,4 @@
+// require('../../../app');
 require('../../utils/connectDb');
 const Product = require('../../models/product');
 
@@ -21,7 +22,11 @@ function addProduct(name, description, price, category, photoPath) {
       });
   }
 
-  addProduct('Klawiatura mechaniczna', 'Klawiatura z mechanicznymi przełącznikami', 250, 'Elektronika','<path>')
+//   addProduct('Klawiatura mechaniczna', 'Klawiatura z mechanicznymi przełącznikami', 600, 'Elektronika','<path>')
+//   addProduct('Głośniczek', 'głośny', 100, 'Elektronika','<path>')
+//   addProduct('słuchawki', 'głośne', 100, 'Elektronika','<path>')
+//   addProduct('telefon', 'szybki', 600, 'Elektronika','<path>')
+
 
 //   createProduct({
 //     name: 'Klawiatura mechaniczna',
