@@ -21,7 +21,8 @@ const productSchema = new mongoose.Schema({
   photoPath: {
     type: String,
     required: true
-  }
+  } 
+  //ilosc
 });
 
 const Product = mongoose.model('Product', productSchema);

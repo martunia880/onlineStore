@@ -34,6 +34,28 @@ section h2 {
   padding: 20px;
 }
 
+.button {
+  padding: 10px 0;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #4682b4;
+  color: #f7f5f2;
+  border: none;
+  border-radius: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+.button:hover {
+  background-color: rgb(255, 136, 0);
+  transform: scale(1.05);
+}
+
 .nav {
   position: fixed;
   display: flex;
@@ -153,6 +175,7 @@ section.newproducts .products-container .product-box .product-info {
   margin-top: 0.8rem;
   text-align: center;
 }
+
 section.newsletter {
   display: flex;
   justify-content: space-between;
@@ -208,6 +231,74 @@ section.newsletter .newsletter-form button {
 }
 section.newsletter .newsletter-form button:hover {
   padding: 0 35px;
+}
+section.products {
+  margin-bottom: 60px;
+  padding: 70px 100px;
+}
+section.products h2 {
+  margin-bottom: 50px;
+}
+section.products .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 100px;
+}
+section.products .products-container .product-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #f7f5f2;
+  box-shadow: 1px 1px 5px #c0c9d1;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+section.products .products-container .product-box .product-img img {
+  width: 300px;
+  height: 300px;
+}
+section.products .products-container .product-box .product-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 100%;
+}
+section.products .products-container .product-box .product-info h4.product-name {
+  padding: 10px 0;
+  font-size: 20px;
+}
+section.products .products-container .product-box .product-info .product-rating {
+  font-size: 20px;
+}
+section.products .products-container .product-box .product-info .product-price {
+  font-size: 25px;
+  padding: 10px 0;
+}
+section.products .products-container .product-box .product-info button.add-product {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background-color: #4682b4;
+  box-shadow: 1px 1px 5px #c0c9d1;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+section.products .products-container .product-box .product-info button.add-product:hover {
+  background-color: #325f85;
+  transform: scale(1.05);
+}
+section.products .products-container .product-box:hover {
+  transform: scale(1.05);
 }
 
 section.bag {
@@ -288,33 +379,116 @@ section.bag .bagbox .bagbox-total .total .total-info .left {
   text-align: right;
 }
 section.bag .bagbox .bagbox-total .pay-btn {
-  font-size: 1.5rem;
   padding: 10px 20px;
   margin: 10px;
-  border: none;
-  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 section.account {
-  padding-top: 60px;
+  padding-top: 80px;
+  max-width: 800px;
 }
-section.account .personal-details {
+section.account .accountinfo {
+  background-color: #f7f5f2;
+}
+section.account .accountinfo .accountinfo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
   padding: 30px;
   font-size: 2rem;
+  background-color: white;
 }
-section.account .personal-details .personal-details {
+section.account .accountinfo .accountinfo-box h2 {
+  padding-bottom: 10px;
+}
+section.account .accountinfo .accountinfo-box .line {
+  margin: 20px 0;
+  width: 100%;
+  height: 1px;
+  background-color: #222;
+}
+section.account .accountinfo .accountinfo-box .edit-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  width: 90%;
+  max-width: 300px;
+}
+section.account .accountinfo .accountinfo-box .first, section.account .accountinfo .accountinfo-box .second {
+  width: 100%;
+}
+section.account .accountinfo .accountinfo-box .personal-detail {
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  padding: 0 10px;
+}
+section.account .accountinfo .accountinfo-box .personal-detail .personal-detail-name {
+  font-weight: 600;
+  padding: 8px 0 6px 0;
+}
+section.account .accountinfo .accountinfo-box .orders {
+  width: 100%;
+  padding: 0 10px;
+}
+section.account .accountinfo .accountinfo-box .orders .order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  width: 100%;
+}
+section.account .accountinfo .accountinfo-box .orders .order .order-heading {
+  padding: 10px 0;
+}
+section.account .accountinfo .accountinfo-box .orders .order .order-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+section.account .accountinfo .accountinfo-box .orders .order .order-product .product-img {
+  margin: 15px 15px 15px 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  background-image: url(../img/MQD83.jpg);
+  background-size: cover;
+  background-position: center;
+}
+section.account .accountinfo .accountinfo-box .orders .order .order-product .product-info {
+  padding: 10px 0;
+}
+section.account .accountinfo .accountinfo-box .orders .order .order-product .product-info .product-info-element {
+  padding-bottom: 5px;
+}
+section.account .accountinfo .accountinfo-box .orders .order .order-product .product-info .product-info-element2 {
+  padding-bottom: 2px;
+}
+section.account .accountinfo .accountinfo-box .orders .order .order-totalprice {
+  font-weight: 600;
   margin-bottom: 20px;
 }
-section.account .personal-details .personal-details .personal-detail {
-  margin-bottom: 15px;
-  background-color: white;
-  width: 100%;
-  height: 100%;
+section.account .accountinfo .accountinfo-box .orders .order .return-button {
+  width: 90%;
 }
 
 @media (min-width: 576px) {
   section.newproducts .products-container .product-box {
     flex-basis: calc(50% - 0px);
+  }
+  section.account .accountinfo .accountinfo-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  section.account .accountinfo .accountinfo-box .first, section.account .accountinfo .accountinfo-box .second {
+    width: 50%;
+  }
+  section.account .accountinfo .accountinfo-box .orders .order .order-product {
+    justify-content: flex-start;
   }
 }
 @media (min-width: 992px) {
@@ -516,4 +690,6 @@ section.login .form-wrapper .hide {
 footer {
   position: absolute;
   bottom: 0;
-}/*# sourceMappingURL=main.css.map */
+}
+
+
