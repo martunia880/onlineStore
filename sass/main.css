@@ -231,6 +231,7 @@ section.newproducts .products-container .product-box {
   align-items: center;
   min-width: 200px;
   max-width: 300px;
+  cursor: pointer;
   height: 250px;
   background-color: white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -249,7 +250,6 @@ section.newproducts .products-container .product-box .product-info {
   margin-top: 0.8rem;
   text-align: center;
 }
-
 section.newsletter {
   display: flex;
   justify-content: space-between;
@@ -306,6 +306,7 @@ section.newsletter .newsletter-form button {
 section.newsletter .newsletter-form button:hover {
   padding: 0 35px;
 }
+
 section.products {
   margin-bottom: 60px;
   padding: 70px 100px;
@@ -578,7 +579,6 @@ section.account .accountinfo .accountinfo-box .orders .order .return-button {
   section.bag .bagbox {
     display: flex;
     flex-direction: row;
-    flex-basis: calc(50% - 0px);
   }
   section.bag .bagbox .box {
     margin: 10px;
@@ -766,5 +766,111 @@ section.login .form-wrapper .hide {
 footer {
   position: absolute;
   bottom: 0;
-}/*# sourceMappingURL=main.css.map */
+}
 
+section.product {
+  padding-top: 60px;
+}
+section.product .productbox {
+  padding: 30px;
+  font-size: 2rem;
+}
+section.product .productbox .box {
+  width: 100%;
+  background-color: #f7f5f2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+section.product .productbox .productbox-presentation {
+  background-color: #f7f5f2;
+  min-height: 500px;
+}
+section.product .productbox .productbox-presentation .presentation {
+  display: flex;
+  height: 460px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+section.product .productbox .productbox-presentation .presentation .presentation-img {
+  width: 300px;
+  height: 300px;
+  background-image: url(../img/iszmata.webp);
+  background-size: cover;
+  background-position: center;
+}
+section.product .productbox .media-right .productbox-description {
+  min-height: 300px;
+}
+section.product .productbox .media-right .productbox-description .box-heading {
+  text-align: center;
+}
+section.product .productbox .media-right .productbox-description .description-date {
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+section.product .productbox .media-right .productbox-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.product .productbox .media-right .productbox-total .box-heading {
+  text-align: center;
+}
+section.product .productbox .media-right .productbox-total .total {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section.product .productbox .media-right .productbox-total .total .total-info {
+  height: 100px;
+  padding: 5px 0;
+}
+section.product .productbox .media-right .productbox-total .total .total-info p {
+  padding: 3px 0;
+}
+section.product .productbox .media-right .productbox-total .total .total-info select {
+  padding: 3px 0;
+}
+section.product .productbox .media-right .productbox-total .total .total-info .left {
+  text-align: right;
+}
+section.product .productbox .media-right .productbox-total .total .total-info.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+section.product .productbox .media-right .productbox-total .add-btn {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  section.product .productbox {
+    display: flex;
+    flex-direction: row;
+  }
+  section.product .productbox .box {
+    margin: 10px;
+    width: 100%;
+  }
+  section.product .productbox .productbox-presentation {
+    margin-left: 0;
+    width: 50%;
+  }
+  section.product .productbox .productbox-presentation .presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  section.product .productbox .media-right {
+    width: 50%;
+    overflow: hidden;
+  }
+}/*# sourceMappingURL=main.css.map */

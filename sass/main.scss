@@ -151,14 +151,12 @@ section {
 				letter-spacing: 4px;
 			}
 
-			
-
 			.bookmarks {
 				position: relative;
 				margin: 20px 0 20px 0;
-			  }
-			  
-			  .bookmarks:after {
+			}
+
+			.bookmarks:after {
 				content: '';
 				position: absolute;
 				left: 0;
@@ -168,24 +166,20 @@ section {
 				background-color: $hover-color;
 				border-radius: 5px;
 				transition: width 0.3s ease-in-out;
-			  }
-			  
-			  .bookmarks:nth-of-type(even) {
-				
+			}
+
+			.bookmarks:nth-of-type(even) {
 				&:after {
 					// zmienione style dla pseudoelementu ::after dla co drugiego elementu
 					left: auto;
 					right: 0;
-				  }
-			  }
-			 
-			  
-			  .bookmarks:hover:after {
-				width: 100%;
-			  }
-		}
+				}
+			}
 
-		
+			.bookmarks:hover:after {
+				width: 100%;
+			}
+		}
 
 		.bookmarks-container.active {
 			transform: translate(0%);
@@ -207,8 +201,6 @@ section {
 				// 	display: none;
 				// }
 			}
-
-			
 
 			.nav-links {
 				display: none;
@@ -275,6 +267,7 @@ section.newproducts {
 			align-items: center;
 			min-width: 200px;
 			max-width: 300px;
+			cursor: pointer;
 
 			height: 250px;
 			background-color: $pure-white;
@@ -327,25 +320,24 @@ section.newsletter {
 			color: #fff;
 			margin: 5px;
 		}
-	
+
 		p {
 			font-size: 14px;
 			font-weight: 600;
 			color: #818ea0;
 			margin: 5px;
-	
+
 			span {
 				color: #ffbe27;
 			}
 		}
-	
 	}
 
 	.newsletter-form {
 		display: flex;
 		width: 40%;
 
-		input  {
+		input {
 			height: 45px;
 			width: 100%;
 			font-size: 14px;
@@ -354,7 +346,7 @@ section.newsletter {
 			border-radius: 4px 0 0 4px;
 			outline: none;
 		}
-	
+
 		button {
 			height: 45px;
 			font-size: 14px;
@@ -370,7 +362,6 @@ section.newsletter {
 			transition: 0.2s;
 		}
 
-		
 		button:hover {
 			padding: 0 35px;
 		}
@@ -679,7 +670,6 @@ section.account {
 		.bagbox {
 			display: flex;
 			flex-direction: row;
-			flex-basis: calc(50% - 0px);
 			.box {
 				margin: 10px;
 				width: 100%;
@@ -899,4 +889,118 @@ section.login {
 footer {
 	position: absolute;
 	bottom: 0;
+}
+
+section.product {
+	padding-top: 60px;
+	.productbox {
+		padding: 30px;
+		font-size: 2rem;
+		.box {
+			width: 100%;
+			background-color: $field-bg-color;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding: 20px;
+		}
+		.productbox-presentation {
+			background-color: $field-bg-color;
+			min-height: 500px;
+			.presentation {
+				display: flex;
+				height: 460px;
+				flex-direction: row;
+					justify-content: center;
+					align-items: center;
+				background-color: $pure-white;
+
+				.presentation-img {
+					width: 300px;
+					height: 300px;
+					background-image: url(../img/iszmata.webp);
+					background-size: cover;
+					background-position: center;
+				}
+			}
+		}
+
+		.media-right {
+
+			.productbox-description {
+				min-height: 300px;
+				.box-heading {
+					text-align: center;
+				}
+				.description-date {
+					font-size: 1.5rem;
+					padding-top: 20px;
+				}
+			}
+			.productbox-total {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				.box-heading {
+					text-align: center;
+				}
+				.total {
+					padding: 0 20px;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					.total-info {
+						height: 100px;
+						padding: 5px 0;
+						p {
+							padding: 3px 0;
+						}
+						select {
+							padding: 3px 0;
+						}
+						.left {
+							text-align: right;
+						}
+					}
+					.total-info.left {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-evenly;
+					}
+				}
+				.add-btn {
+					padding: 10px 20px;
+					margin: 10px;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	section.product {
+		.productbox {
+			display: flex;
+			flex-direction: row;
+			.box {
+				margin: 10px;
+				width: 100%;
+			}
+			.productbox-presentation {
+				margin-left: 0;
+				width: 50%;
+				.presentation{
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					height: 100%;
+				}
+			}
+			.media-right {
+				width: 50%;
+				overflow: hidden;
+			}
+		}
+	}
 }
