@@ -182,38 +182,49 @@ section h2 {
 }
 
 header .slide-box {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 40vh;
+  overflow: hidden;
 }
 header .slide-box .slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  text-align: center;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
-header .slide-box .slide h3 {
-  font-size: 3.5rem;
-  color: #f7f5f2;
-}
-header .slide-box .slide p {
-  font-size: 2rem;
-  color: #f7f5f2;
+header .slide-box .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .slide-box .slide-one {
-  background-image: url("https://img-ovh-cloud.zszywka.pl/1/0660/8074-kwiatki.jpg");
+  opacity: 1;
 }
-
-section.newproducts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+header .slide-box .prev-btn,
+header .slide-box .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+header .slide-box .prev-btn {
+  left: 20px;
+}
+header .slide-box .next-btn {
+  right: 20px;
 }
 
 section.newsletter {
@@ -273,26 +284,33 @@ section.newsletter .newsletter-form button:hover {
   padding: 0 35px;
 }
 
+section.newproducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 section.products {
-  margin-bottom: 60px;
-  padding: 70px 100px;
+  margin-top: 20px;
+  padding: 10px 20px;
 }
 section.products h2 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 section.products .products-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   justify-content: center;
   align-items: center;
-  grid-gap: 100px;
+  grid-gap: 40px;
 }
 section.products .products-container .product-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 350px;
+  max-width: 280px;
   padding: 10px 20px;
   margin: 0 auto;
   background-color: white;
@@ -300,9 +318,13 @@ section.products .products-container .product-box {
   border-radius: 5px;
   transition: transform 0.2s;
 }
-section.products .products-container .product-box .product-img img {
+section.products .products-container .product-box .product-img {
   width: 250px;
   height: 250px;
+}
+section.products .products-container .product-box .product-img img {
+  width: 100%;
+  height: 100%;
 }
 section.products .products-container .product-box .product-info {
   position: relative;
@@ -342,9 +364,65 @@ section.products .products-container .product-box .product-info button.add-produ
   transform: scale(1.05);
 }
 section.products .products-container .product-box:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
+@media (min-width: 576px) {
+  section.products h2 {
+    font-size: 32px;
+  }
+  section.products .products-container {
+    grid-gap: 60px;
+  }
+  section.products .products-container .product-box {
+    min-width: 380px;
+    max-width: 500px;
+  }
+  section.products .products-container .product-box .product-img {
+    width: 320px;
+    height: 320px;
+  }
+  section.products .products-container .product-box .product-info button.add-product {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media (min-width: 992px) {
+  section.products .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  section.products {
+    margin-top: 40px;
+  }
+  section.products .products-container {
+    grid-gap: 60px;
+  }
+  section.products .products-container .product-box {
+    min-width: 380px;
+    max-width: 500px;
+    max-height: 440px;
+  }
+  section.products .products-container .product-box .product-img {
+    width: 300px;
+    height: 300px;
+  }
+  section.products .products-container .product-box .product-info button.add-product {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media (min-width: 1400px) {
+  section.products .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 2000px) {
+  section.products .products-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 section.bag {
   padding-top: 60px;
 }
@@ -693,12 +771,12 @@ section.login .form-wrapper .hide {
   display: none;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
   section.login .form-wrapper form {
     padding: 40px;
   }
 }
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   section.login .form-wrapper form {
     padding: 50px;
     width: 50vh;
