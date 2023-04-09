@@ -215,41 +215,7 @@ section.newproducts {
   justify-content: center;
   align-items: center;
 }
-section.newproducts .products-container {
-  display: flex;
-  padding: 40px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-section.newproducts .products-container .product-box {
-  margin: 10px 30px;
-  flex-basis: calc(100% - 0px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 200px;
-  max-width: 300px;
-  cursor: pointer;
-  height: 250px;
-  background-color: white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-}
-section.newproducts .products-container .product-box .product-img {
-  width: 200px;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-  background-image: url(../img/iszmata.webp);
-}
-section.newproducts .products-container .product-box .product-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0.8rem;
-  text-align: center;
-}
+
 section.newsletter {
   display: flex;
   justify-content: space-between;
@@ -316,7 +282,9 @@ section.products h2 {
 }
 section.products .products-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
   grid-gap: 100px;
 }
 section.products .products-container .product-box {
@@ -324,16 +292,17 @@ section.products .products-container .product-box {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  min-width: 350px;
   padding: 10px 20px;
-  background-color: #f7f5f2;
+  margin: 0 auto;
+  background-color: white;
   box-shadow: 1px 1px 5px #c0c9d1;
   border-radius: 5px;
   transition: transform 0.2s;
 }
 section.products .products-container .product-box .product-img img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 section.products .products-container .product-box .product-info {
   position: relative;
@@ -873,4 +842,4 @@ section.product .productbox .media-right .productbox-total .add-btn {
     width: 50%;
     overflow: hidden;
   }
-}/*# sourceMappingURL=main.css.map */
+}
