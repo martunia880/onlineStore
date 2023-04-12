@@ -10,6 +10,7 @@ function toggleInput() {
 window.addEventListener('resize', function() {
     if (window.innerWidth <= 768) {
       hideInput();
+      hideSerchContainerResults();
     }
   });
 
@@ -19,6 +20,10 @@ function showInput() {
 
 function hideInput() {
 	document.getElementById('input-serch').style.display = 'none';
+}
+
+function hideSerchContainerResults() {
+	document.getElementById('results-container').style.display = 'none';
 }
 
 function burgerMenuShow(){

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Store</title>
-    <link rel="stylesheet" href="./sass/main.css" />
-    <script src="https://kit.fontawesome.com/56b56de47f.js" crossorigin="anonymous"></script>
-    <script src="./scripts/script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap"
-        rel="stylesheet" />
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Online Store</title>
+		<link rel="stylesheet" href="./sass/main.css" />
+		<script
+			src="https://kit.fontawesome.com/56b56de47f.js"
+			crossorigin="anonymous"></script>
+		<script src="./scripts/script.js"></script>
+    <script src="./scripts/serch.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap"
+			rel="stylesheet" />
+	</head>
+
 
 <body>
     <nav class="nav">
@@ -35,10 +40,11 @@
                 <i class="fa-solid fa-magnifying-glass magnifier" onclick="toggleInput()"></i>
                 <!-- <a href="favourite"></a> -->
             </div>
-            <input class="input-serch" id="input-serch" type="text" />
+            <input type="text" class="input-serch" id="input-serch" onkeyup="search()" placeholder="Wyszukaj...">
             <button class="burger-icon" id="burger-icon" onclick="burgerMenuShow()"><i class="fas fa-bars"></i></button>
             <div class="bookmarks-container" id="bookmarks-container">
                 <!-- <i class="fa-solid fa-magnifying-glass magnifier"
+
 					onclick="toggleInput()"></i> -->
                 <!-- co z wyszukiwarka? -->
                 <a href="#categories" class="bookmarks">Categories</a>
@@ -50,7 +56,9 @@
 
             </div>
 
+
         </div>
+        <div id="results-container"><div id="search-results"></div></div>
     </nav>
     <header>
         <div class="slide-box">
