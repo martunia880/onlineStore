@@ -10,6 +10,7 @@
 			src="https://kit.fontawesome.com/56b56de47f.js"
 			crossorigin="anonymous"></script>
 		<script src="./scripts/script.js"></script>
+        <script src="./scripts/serch.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -39,7 +40,7 @@
 						onclick="toggleInput()"></i>
 					<!-- <a href="favourite"></a> -->
 				</div>
-				<input class="input-serch" id="input-serch" type="text" />
+                <input type="text" class="input-serch" id="input-serch" onkeyup="search()" placeholder="Wyszukaj...">
 				<button class="burger-icon" id="burger-icon" onclick="burgerMenuShow()"><i class="fas fa-bars"></i></button>
                 <div class="bookmarks-container" id="bookmarks-container">
                     <!-- <i class="fa-solid fa-magnifying-glass magnifier"
@@ -55,6 +56,8 @@
                 </div>
 				
 			</div>
+            <div id="results-container"><div id="search-results"></div></div>
+            
 		</nav>
 		<header>
 			<div class="slide-box">
