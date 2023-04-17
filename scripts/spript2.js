@@ -7,7 +7,6 @@ const registerForm = document.querySelector('.register-form');
 function showRegister() {
 	loginForm.classList.toggle('hide');
 	registerForm.classList.toggle('hide');
-	console.log('xd');
 }
 function showLogin() {}
 
