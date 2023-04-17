@@ -57,6 +57,14 @@ section {
 	transform: scale(1.05);
 }
 
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 .nav {
 	position: fixed;
 	display: flex;
@@ -85,6 +93,7 @@ section {
 		align-items: center;
 		width: 100%;
 		height: 100%;
+		
 
 		.nav-links {
 			padding-right: 25px;
@@ -200,86 +209,6 @@ section.newproducts {
 				}
 			}
 		}
-		// .no-display {
-		// 	display: none;
-		// }
-	}
-}
-
-section.products {
-	margin-bottom: 60px;
-	padding: 70px 100px;
-	h2 {
-		margin-bottom: 50px;
-	}
-	.products-container {
-		display: grid;
-
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		grid-gap: 100px;
-		.product-box {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			padding: 10px 20px;
-
-			background-color: $field-bg-color;
-			box-shadow: 1px 1px 5px $box-shadow-color;
-			border-radius: 5px;
-			transition: transform 0.2s;
-			.product-img {
-				img {
-					width: 300px;
-					height: 300px;
-				}
-			}
-
-			.product-info {
-				position: relative;
-				display: flex;
-				flex-direction: column;
-				margin-top: 15px;
-				width: 100%;
-				h4.product-name {
-					padding: 10px 0;
-					font-size: 20px;
-				}
-
-				.product-rating {
-					font-size: 20px;
-				}
-
-				.product-price {
-					font-size: 25px;
-					padding: 10px 0;
-				}
-
-				button.add-product {
-					position: absolute;
-					right: 10px;
-					bottom: 15px;
-					width: 50px;
-					height: 50px;
-					font-size: 20px;
-					color: $pure-white;
-					border: none;
-					border-radius: 50%;
-					background-color: $accent-color;
-					box-shadow: 1px 1px 5px $box-shadow-color;
-					transition: background-color 0.3s, transform 0.2s;
-					cursor: pointer;
-				}
-				button.add-product:hover {
-					background-color: #325f85;
-					transform: scale(1.05);
-				}
-			}
-		}
-		.product-box:hover {
-			transform: scale(1.05);
-		}
 	}
 }
 
@@ -367,12 +296,69 @@ section.bag {
 		}
 	}
 }
-
+.account-edit-background {
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.162);
+	padding: 40px;
+	padding-top: 80px;
+	z-index: 10;
+	.account-form {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		width: 80%;
+		padding: 50px;
+		padding-top: 80px;
+		max-width: 400px;
+		background-color: $field-bg-color;
+		border-radius: 10px;
+		box-shadow: 1px 1px 5px $box-shadow-color;
+		animation: show 0.3s ease-in-out forwards;
+		.save-button {
+			padding: 10px 20px;
+			margin-top: 30px;
+		}
+		.close-button {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			padding: 10px 15px;
+			border-radius: 50%;
+		}
+		input {
+			margin: 5px;
+			width: 100%;
+			height: 30px;
+			max-width: 300px;
+			border: none;
+			border-bottom: solid 1px $input-color;
+			background: none;
+			outline: none;
+			color: $input-color;
+		}
+		input::placeholder {
+			font-size: 14px;
+			padding: 7px 0;
+			color: $input-color;
+		}
+	}
+}
+.display-none {
+	display: none;
+}
 section.account {
 	padding-top: 80px;
 	max-width: 800px;
 	.accountinfo {
 		background-color: $field-bg-color;
+		box-shadow: 1px 1px 5px $box-shadow-color;
 		.accountinfo-box {
 			display: flex;
 			flex-direction: column;
@@ -381,8 +367,10 @@ section.account {
 			padding: 30px;
 			font-size: 2rem;
 			background-color: white;
+			box-shadow: 1px 1px 5px $box-shadow-color;
 			h2 {
 				padding-bottom: 10px;
+				// text-decoration: underline;
 			}
 			.line {
 				margin: 20px 0;
@@ -396,11 +384,17 @@ section.account {
 				width: 90%;
 				max-width: 300px;
 			}
+			.edit-button-additional {
+				margin-top: 9.5px;
+			}
 			.first, .second {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 				width: 100%;
 			}
 			.personal-detail {
-				margin-bottom: 15px;
+				margin-bottom: 8px;
 				width: 100%;
 				max-width: 300px;
 				height: 100%;
@@ -454,7 +448,6 @@ section.account {
 						font-weight: 600;
 						margin-bottom: 20px;
 					}
-					
 					.return-button {
 						width: 90%;
 					}
