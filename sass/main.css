@@ -107,7 +107,7 @@ section h2 {
 }
 .nav .nav-container .input-serch {
   display: none;
-  width: 200px;
+  width: 75px;
   margin: 0 5px;
   border-radius: 20px;
   margin: 10px;
@@ -1025,4 +1025,6 @@ section.product .productbox .media-right .productbox-total .add-btn {
     width: 50%;
     overflow: hidden;
   }
-}
+
+}/*# sourceMappingURL=main.css.map */
+

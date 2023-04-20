@@ -7,7 +7,6 @@ const Product = require('./database/models/product');
 
 
 const bodyParser = require('body-parser');
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
@@ -72,3 +71,4 @@ app.post('/checkYourLoginDetails', (req, res) => {
 app.listen(5500, () => {
 	console.log('Server is running on port 5500');
 });
+
