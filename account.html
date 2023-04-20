@@ -32,61 +32,95 @@
             <input class="input-serch" id="input-serch" type="text">
         </div>
     </nav>
+    <div class="account-edit-background display-none">
+        <form id="form-pers" data-form-name="form-pers"  class="account-form">
+            <button class="button close-button"><i class="fa-solid fa-xmark"></i></button>
+            <input type="text" id="account-name" placeholder="Name">
+            <input type="tel" id="account-phone" placeholder="Mobile phone">
+            <input type="date" id="account-birthdate" placeholder="Birthday Date">
+            <input type="email" id="account-email" placeholder="E-mail">
+            <button class="button save-button">Save</button>
+        </form>
+    </div>
+    <div class="account-edit-background display-none">
+        <form id="form-pass" data-form-name="form-pass" class="account-form">
+            <button class="button close-button"><i class="fa-solid fa-xmark"></i></button>
+            <input type="password" id="account-last-password" placeholder="Old Password">
+            <input type="password" id="account-new-password" placeholder="New Password">
+            <input type="password" id="account-new-password2" placeholder="New Password">
+            <button class="button save-button">Save</button>
+        </form>
+    </div>
+    <div class="account-edit-background display-none">
+        <form id="form-address" data-form-name="form-address"  class="account-form">
+            <button class="button close-button"><i class="fa-solid fa-xmark"></i></button>
+            <input type="text" id="account-country" placeholder="Country">
+            <input type="text" id="account-postcode" placeholder="Post Code">
+            <input type="text" id="account-city" placeholder="City">
+            <input type="text" id="account-street" placeholder="Street">
+            <input type="number" id="account-housenumber" placeholder="House Number">
+            <input type="number" id="account-flatnumber" placeholder="Flat Number">
+            <button class="button save-button">Save</button>
+        </form>
+    </div> 
     <section class="account wrapper">
         <div class="accountinfo personal-details wrapper">
             <h2>Personal details</h2>   
             <div class="accountinfo-box">
-                
                 <div class="first">
                     <div class="personal-detail">
                         <p class="personal-detail-name">Name</p>
-                        <p class="personal-detail-info">Marta Guza</p>
+                        <p class="personal-detail-info" id="account-name-el">-</p>
                     </div>
                     <div class="personal-detail">
                         <p class="personal-detail-name">Mobile Phone</p>
-                        <p class="personal-detail-info">123456789</p>
+                        <p class="personal-detail-info" id="account-phone-el">-</p>
                     </div>
                     <div class="personal-detail">
                         <p class="personal-detail-name">Date of birth</p>
-                        <p class="personal-detail-info">07/03/1999</p>
+                        <p class="personal-detail-info" id="account-birthday-el">-</p>
                     </div>
                     <div class="personal-detail">
                         <p class="personal-detail-name">Email</p>
-                        <p class="personal-detail-info">07/03/1999</p>
+                        <p class="personal-detail-info" id="account-email-el">-</p>
                     </div>
-                    <button class="button edit-button">Edit</button>
+                    <button data-form="form-pers" class="button edit-button" id="edit-personal-btn">Edit</button>
                     <div class="personal-detail">
                         <p class="personal-detail-name">Password</p>
-                        <p class="personal-detail-info">*****</p>
+                        <p class="personal-detail-info" id="account-last-password-el">*****</p>
                     </div>
-                    <button class="button edit-button">Edit</button>
+                    <button data-form="form-pass" class="button edit-button edit-button-additional" id="edit-personal-btn">Edit</button>
                 </div>
                 <div class="second">
                     <div class="personal-detail">
                         <p class="personal-detail-name">Country</p>
-                        <p class="personal-detail-info">Poland</p>
+                        <p class="personal-detail-info" id="account-country-el">-</p>
                     </div>
                     <div class="personal-detail">
                         <p class="personal-detail-name">Post Code</p>
-                        <p class="personal-detail-info">05-532</p>
+                        <p class="personal-detail-info" id="account-postcode-el">-</p>
                     </div>
                     <div class="personal-detail">
                         <p class="personal-detail-name">City</p>
-                        <p class="personal-detail-info">Baniocha</p>
+                        <p class="personal-detail-info" id="account-city-el">-</p>
                     </div>
                     <div class="personal-detail">
                         <p class="personal-detail-name">Street</p>
-                        <p class="personal-detail-info">Projetowana</p>
+                        <p class="personal-detail-info" id="account-street-el">-</p>
                     </div>
                     <div class="personal-detail">
-                        <p class="personal-detail-name">Number</p>
-                        <p class="personal-detail-info">8</p>
+                        <p class="personal-detail-name">Street Number</p>
+                        <p class="personal-detail-info" id="account-housenumber-el">-</p>
                     </div>
-                    <button class="button edit-button">Edit</button>
+                    <div class="personal-detail">
+                        <p class="personal-detail-name">Flat Number</p>
+                        <p class="personal-detail-info" id="account-flatnumber-el">-</p>
+                    </div>
+                    <button data-form="form-address" class="button edit-button" id="edit-address-btn">Edit</button>
                 </div>
             </div>
+            <h2>Orders</h2>
             <div class="accountinfo-box">
-                <h2>Orders</h2>
                 <div class="orders">
                     <div class="order">
                         <h3 class="order-heading">Order number 123</h3>
@@ -127,7 +161,7 @@
             </div>
         </div>
     </section>
-    
+    <script src="./scripts/script3.js"></script>
 </body>
 
 </html>
