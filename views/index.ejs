@@ -62,17 +62,18 @@
 			
 
 			<div class="products-container">
-				<% products.forEach(function(product, index) { %> <% if (index < 6) { %>
-				<div class="product-box">
-					<div class="product-img" style="background-image: url('<%= "/img/" + product.photoPath %>');"></div>
-					<div class="product-info">
+				<% products.forEach(function(product, index) { %>
+				  <% if (index < 6) { %>
+					<div class="product-box">
+					  <div class="product-img" style="background-image: url('<%= "/img/" + product.photoPath %>');"></div>
+					  <div class="product-info">
 						<h4 class="product-name"><%= product.name %></h4>
 						<p class="product-price"><%= product.price %></p>
+					  </div>
 					</div>
-				</div>
-				<% } %> 
-			<% }) %>
-			</div>
+				  <% } %>
+				<% }) %>
+			  </div>
 
 			<!-- <div class="products-container">
 				<div class="product-box">
