@@ -46,6 +46,10 @@ app.get('/', async function (req, res) {
     res.render('index', { products, shuffleArray });
 });
 
+app.get('/account', function (req, res) {
+	res.render('account');
+});
+
 app.get('/form', function (req, res) {
 	res.render('form');
 });
@@ -57,7 +61,7 @@ app.get('/basket', function (req, res) {
 app.get('/products', async function (req, res) {
 	const products = await Product.find().exec();	
 
-	res.render('products', { products, shuffleArray });
+	res.render('products', { products });
 });
 
 app.post('/product', function (req, res) {

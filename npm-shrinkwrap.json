@@ -1,12 +1,34 @@
 {
-  "name": "onlineStore",
+  "name": "onlinestore",
+  "version": "1.0.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
+      "name": "onlinestore",
+      "version": "1.0.0",
+      "license": "ISC",
       "dependencies": {
-        "php": "^1.0.2"
-      }
+        "circular": "^1.0.5",
+        "cross-spawn": "^7.0.3",
+        "execa": "^5.1.1",
+        "get-stream": "^6.0.1",
+        "human-signals": "^2.1.0",
+        "is-stream": "^2.0.1",
+        "isexe": "^2.0.0",
+        "merge-stream": "^2.0.0",
+        "mimic-fn": "^2.1.0",
+        "npm-run-path": "^4.0.1",
+        "onetime": "^5.1.2",
+        "path-key": "^3.1.1",
+        "php": "^1.0.2",
+        "shebang-command": "^2.0.0",
+        "shebang-regex": "^3.0.0",
+        "signal-exit": "^3.0.7",
+        "strip-final-newline": "^2.0.0",
+        "which": "^2.0.2"
+      },
+      "devDependencies": {}
     },
     "node_modules/circular": {
       "version": "1.0.5",

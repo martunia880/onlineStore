@@ -39,7 +39,7 @@ section h2 {
   height: 40px;
   font-size: 12px;
   font-weight: bold;
-  background-color: #4682b4;
+  background-color: rgb(0, 110, 255);
   color: #f7f5f2;
   border: none;
   border-radius: 40px;
@@ -52,7 +52,7 @@ section h2 {
 }
 
 .button:hover {
-  background-color: rgb(255, 136, 0);
+  background-color: rgb(0, 110, 255);
   transform: scale(1.05);
 }
 
@@ -72,7 +72,7 @@ section h2 {
   height: 60px;
   padding: 10px 20px;
   font-size: 1.8rem;
-  background-color: #f7f5f2;
+  background-color: white;
   z-index: 10;
   box-shadow: 1px 1px 5px #c0c9d1;
 }
@@ -96,10 +96,10 @@ section h2 {
   padding-right: 25px;
 }
 .nav .nav-container a:hover {
-  color: rgb(255, 136, 0);
+  color: rgb(0, 110, 255);
 }
 .nav .nav-container .nav-icons i:hover {
-  color: rgb(255, 136, 0);
+  color: rgb(0, 110, 255);
 }
 .nav .nav-container .nav-icons .magnifier {
   cursor: pointer;
@@ -125,7 +125,7 @@ section h2 {
   cursor: pointer;
 }
 .nav .nav-container .burger-icon:hover {
-  color: rgb(255, 136, 0);
+  color: rgb(0, 110, 255);
 }
 .nav .nav-container .bookmarks-container {
   display: none;
@@ -157,7 +157,7 @@ section h2 {
   bottom: 0px;
   width: 0%;
   height: 3px;
-  background-color: rgb(255, 136, 0);
+  background-color: rgb(0, 110, 255);
   border-radius: 5px;
   transition: width 0.3s ease-in-out;
 }
@@ -195,7 +195,7 @@ section h2 {
   right: 0px;
   width: 50vw;
   height: 50vh;
-  background-color: #f7f5f2;
+  background-color: white;
   border-top: 1px solid;
   overflow-y: auto;
 }
@@ -389,7 +389,7 @@ section.products .products-container .product-box .product-info button.add-produ
   color: white;
   border: none;
   border-radius: 50%;
-  background-color: #4682b4;
+  background-color: rgb(0, 110, 255);
   box-shadow: 1px 1px 5px #c0c9d1;
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
@@ -467,12 +467,12 @@ section.bag .bagbox {
 }
 section.bag .bagbox .box {
   width: 100%;
-  background-color: #f7f5f2;
+  background-color: white;
   margin-top: 20px;
   padding: 20px;
 }
 section.bag .bagbox .bagbox-order {
-  background-color: #f7f5f2;
+  background-color: white;
 }
 section.bag .bagbox .bagbox-order .order {
   margin: 20px 0;
@@ -563,7 +563,7 @@ section.bag .bagbox .bagbox-total .pay-btn {
   padding: 50px;
   padding-top: 80px;
   max-width: 400px;
-  background-color: #f7f5f2;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 1px 1px 5px #c0c9d1;
   animation: show 0.3s ease-in-out forwards;
@@ -610,7 +610,7 @@ section.account {
   max-width: 800px;
 }
 section.account .accountinfo {
-  background-color: #f7f5f2;
+  background-color: white;
   box-shadow: 1px 1px 5px #c0c9d1;
 }
 section.account .accountinfo .accountinfo-box {
@@ -784,7 +784,7 @@ section.login .form-wrapper form {
   min-height: 55vh;
   min-width: 40vh;
   padding: 30px;
-  background-color: #f7f5f2;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 1px 1px 5px #c0c9d1;
 }
@@ -805,7 +805,7 @@ section.login .form-wrapper form .input-area .form-box {
 section.login .form-wrapper form .input-area .form-box i {
   padding-bottom: 7px;
   padding-right: 10px;
-  color: #4682b4;
+  color: rgb(0, 110, 255);
   font-size: 1.8rem;
 }
 section.login .form-wrapper form .input-area .form-box input {
@@ -835,7 +835,7 @@ section.login .form-wrapper form .input-area .text {
 }
 section.login .form-wrapper form .input-area .text a {
   text-decoration: none;
-  color: #4682b4;
+  color: rgb(0, 110, 255);
 }
 section.login .form-wrapper form button.send {
   padding: 10px 0;
@@ -843,7 +843,7 @@ section.login .form-wrapper form button.send {
   width: 100px;
   font-size: 12px;
   font-weight: bold;
-  background-color: #4682b4;
+  background-color: rgb(0, 110, 255);
   color: #f7f5f2;
   border: none;
   border-radius: 40px;
@@ -854,7 +854,7 @@ section.login .form-wrapper form button.send {
   box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
 }
 section.login .form-wrapper form button.send:hover {
-  background-color: rgb(255, 136, 0);
+  background-color: rgb(0, 110, 255);
   transform: scale(1.05);
 }
 section.login .form-wrapper form .form-switch {
@@ -866,12 +866,12 @@ section.login .form-wrapper form .form-switch .change-form {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  color: #4682b4;
+  color: rgb(0, 110, 255);
   outline: none;
   border: none;
 }
 section.login .form-wrapper form .form-switch .change-form:hover {
-  color: rgb(255, 136, 0);
+  color: rgb(0, 110, 255);
 }
 section.login .form-wrapper .hide {
   display: none;
@@ -930,13 +930,13 @@ section.product .productbox {
 }
 section.product .productbox .box {
   width: 100%;
-  background-color: #f7f5f2;
+  background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
 }
 section.product .productbox .productbox-presentation {
-  background-color: #f7f5f2;
+  background-color: white;
   min-height: 500px;
 }
 section.product .productbox .productbox-presentation .presentation {
