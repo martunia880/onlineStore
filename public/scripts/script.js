@@ -58,19 +58,12 @@ function changeCategory(category,productsLength) {
   }
 }
 
-function createUniqueCategoriesArray(products) {
-  var categories = [];
-  
-  for (var i = 0; i < products.length; i++) {
-  var product = products[i];
-  var category = product.category;
-
-  if (categories.indexOf(category) === -1) {
-    categories.push(category);
+function changeOnAll(productsLength) {
+  for (let i = 0; i < productsLength; i++) {
+    let productForm = "productForm" + i;
+    let form = document.getElementById(productForm);
+    form.style.display = 'block';
   }
-  }
-  
-  return categories;
 }
 
 

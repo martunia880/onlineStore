@@ -25,6 +25,7 @@
 					const uniqueCategories = createUniqueCategoriesArray(products); // createUniqueCategoriesArray to moja funkcja wyeksportowana z app.js
 				%>
 				<p>Show:</p>
+				<span class="category" onclick="changeOnAll('<%= products.length %>')">All</span>
 				<% for (var i = 0; i < uniqueCategories.length; i++) { %>
 					<span class="category" onclick="changeCategory('<%=uniqueCategories[i]%>','<%= products.length %>')"><%= uniqueCategories[i] %></span>
 				<% } %>
