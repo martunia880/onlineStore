@@ -49,6 +49,20 @@
 						Don't have an account?
 						<a href="#" class="change-form signup-switch">Sign up!</a>
 					</p>
+					<% if (typeof alertLoginMessage !== 'undefined') { %>
+						<% if (typeof positiveRegistration !== 'undefined') { %>
+							<p class="alert-Login-Message" style="color: green;">
+							  <%= alertLoginMessage %>
+							</p>
+							<p class="alert-Login-Message" style="color: green;">
+								<%= alertLoginMessage2 %>
+							  </p>
+						<% } else { %>
+							<p class="alert-Login-Message" style="color: red">
+							<%= alertLoginMessage %>
+							</p>
+						<% } %>
+					<% } %>
 				</form>
 
 				<form class="register-form hide" action="http://localhost:5500/addUserFromRegistration" method="post">
