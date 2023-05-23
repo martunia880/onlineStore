@@ -21,17 +21,19 @@
 	<%- include("partials/navbar") %>
 		<section class="products" id="products">
 			<div class="categories-container">
+				<%
+					const uniqueCategories = createUniqueCategoriesArray(products); // createUniqueCategoriesArray to moja funkcja wyeksportowana z app.js
+				%>
 				<p>Show:</p>
-				<span class="category">Słuchawki</span>
-				<span class="category">Klawiatury</span>
-				<span class="category">Myszki</span>
-				<span class="category">Akcesoria</span>
+				<% for (var i = 0; i < uniqueCategories.length; i++) { %>
+					<span class="category" onclick="changeCategory('<%=uniqueCategories[i]%>','<%= products.length %>')"><%= uniqueCategories[i] %></span>
+				<% } %>
 			</div>
 			<div class="products-container">
 				<% products.forEach(function(product, index) { %>
 					<% if (index < products.length) { %>
-						<form id="productForm<%= index %>" class="product-box" action="http://localhost:5500/product"
-							method="POST" onclick="submitForm(event,'<%= index %>')">
+						<form id="productForm<%= index %>" class="product-box <%= product.category %>" action="http://localhost:5500/product"
+							method="POST" onclick="submitForm(event,'<%= index %>')" >
 							<input type="hidden" name="product" value="<%= JSON.stringify(product) %>">
 							<input type="submit" value="Wyślij" style="display: none;">
 							<div class="product-img">
