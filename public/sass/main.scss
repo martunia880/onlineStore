@@ -68,6 +68,7 @@ section {
 .nav {
 	position: fixed;
 	top: 0;
+	left: 0;
 	display: flex;
 	align-items: center;
 	// justify-content: center;
@@ -253,13 +254,11 @@ section {
 }
 
 header {
-	margin-top: 70px;
+	margin-top: 60px;
 	.slide-show {
 		position: relative;
 		width: 100%;
-		height: 30vh;
-		background-color: $accent-color;
-
+		height: 45vh;
 		.slideshow-container {
 			width: 100%;
 			height: 100%;
@@ -267,32 +266,14 @@ header {
 			margin: auto;
 
 			.slide {
-				display: none;
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				background-color: #ffbe27;
 				img {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
 					vertical-align: middle;
-				}
-				.text {
-					color: #f2f2f2;
-					font-size: 15px;
-					padding: 8px 12px;
-					position: absolute;
-					bottom: 8px;
-					width: 100%;
-					text-align: center;
-				}
-				.numbertext {
-					color: #f2f2f2;
-					font-size: 12px;
-					padding: 8px 12px;
-					position: absolute;
-					top: 0;
 				}
 			}
 			.fade {
@@ -324,7 +305,6 @@ header {
 				background-color: rgba(0, 0, 0, 0.8);
 			}
 		}
-
 		.dots-container {
 			text-align: center;
 			.dot {
@@ -332,14 +312,14 @@ header {
 				height: 15px;
 				width: 15px;
 				margin: 0 2px;
-				background-color: #bbb;
+				background-color: red;
 				border-radius: 50%;
 				display: inline-block;
 				transition: background-color 0.6s ease;
 			}
 			.active,
 			.dot:hover {
-				background-color: #717171;
+				background-color: pink;
 			}
 		}
 	}
@@ -428,9 +408,31 @@ section.newproducts {
 }
 
 section.products {
+	margin-top: 60px;
 	padding: 10px 20px;
-	h2 {
-		margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.categories-container {
+		margin-top: 40px;
+		padding: 10px 15px;
+		display: flex;
+		font-size: 20px;
+		p {
+			padding: 10px 15px;
+		}
+		.category {
+			cursor: pointer;
+			padding: 10px 15px;
+			margin-left: 30px;
+			font-weight: bold;
+			border: 1px solid transparent;
+		}
+		.category:hover {
+			border: 1px solid black;
+			border-radius: 25px;
+		}
 	}
 	.products-container {
 		margin-top: 70px;
