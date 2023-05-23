@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Online Store</title>
-		<link rel="stylesheet" href="sass/main.css" />
-		<script
-			src="https://kit.fontawesome.com/56b56de47f.js"
-			crossorigin="anonymous"></script>
-		<script src="scripts/script.js"></script>
-    	<script src="scripts/serch.js"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap"
-			rel="stylesheet" />
-	</head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Store</title>
+    <link rel="stylesheet" href="sass/main.css" />
+    <script src="https://kit.fontawesome.com/56b56de47f.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/serch.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap"
+        rel="stylesheet" />
+</head>
 
 
 <body>
     <%- include("partials/navbar") %>
-    <header>
-        <div class="slide-box">
-            <div class="slide slide-one">
-                <img src="./img/watch.jpeg" alt="">
-                <h3>Lorem, ipsum.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-            <div class="slide slide-two">
-                <img src="https://static.zara.net/photos///contents/mkt/spots/ss23-north-woman-collection/subhome-xmedia-14//w/2880/IMAGE-landscape-fill-f730f86a-6a75-4546-9a3e-4b9d09800f18-default_0.jpg?ts=1680706119360" alt="">
-                <h3>Lorem, ipsum.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-            <div class="slide slide-three">
-                <img src="./img/product3.png" alt="">
-                <h3>Lorem, ipsum.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-            <button class="prev-btn">&#10094;</button>
-            <button class="next-btn">&#10095;</button>
-        </div>
-    </header>
-    <section class="products newproducts wrapper" id="newproducts">
-        <h2>New Products</h2>
-		
-        <div class="products-container">
-			<% shuffleArray(products).forEach(function(product, index) { %> <% if (index < 6) { %>
-				<form id="productForm<%= index %>" class="product-box" action="http://localhost:5500/product" method="POST" onclick="submitForm(event,'<%= index %>')">
-					<input type="hidden" name="product" value="<%= JSON.stringify(product) %>">
+        <header>
+            <!-- Slideshow container -->
+            <div class="slide-show">
+                <div class="slideshow-container">
 
-					<input type="submit" value="Wyślij" style="display: none;">
-					<div class="product-img">
-						<img src="<%= "/img/" + product.photoPath %>" alt="">
-					</div>
-					<div class="product-info">
-						<h4 class="product-name"><%= product.name %></h4>
-						<div class="product-rating">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-						</div>
-						<button class="add-product"><i class="fa-solid fa-cart-shopping"></i></button>
-						<p class="product-price"><%= product.price %> $</p>
-					</div>
-				</form>
-			<% } %> 
-			<% }) %>
-		</div>
-            
-    </section>
+                    <!-- Full-width images with number and caption text -->
+                    <div class="slide fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="../public/img/slideshow/img1.jpg">
+                        <div class="text">Caption Text</div>
+                    </div>
 
+                    <div class="slide fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="../public/img/slideshow/img2.jpg">
+                        <div class="text">Caption Two</div>
+                    </div>
 
-    <section id="newsletter" class="newsletter" class="wrapper">
-        <div class="newsletter-text">
-            <h4>Sign up for our newsletter</h4>
-            <p>and get a <span>10% discount</span> on your first purchase</p>
-        </div>
-        <div class="newsletter-form">
-            <input type="text" placeholder="Your e-mail address">
-            <button>Sign Up</button>
-        </div>
-    </section>
-    <section id="contactus" class="wrapper"></section>
-    <!-- <footer>
-        <p>
-            &copy; 2023 | OnlineStore
-            <span class="icon-box">
-                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-            </span>
-        </p>
-    </footer> -->
+                    <div class="slide fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="../public/img/slideshow/img3.jpg">
+                        <div class="text">Caption Three</div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
+        </header>
+        <section class="products newproducts wrapper" id="newproducts">
+            <h2>New Products</h2>
+
+            <div class="products-container">
+                <% shuffleArray(products).forEach(function(product, index) { %>
+                    <% if (index < 6) { %>
+                        <form id="productForm<%= index %>" class="product-box" action="http://localhost:5500/product"
+                            method="POST" onclick="submitForm(event,'<%= index %>')">
+                            <input type="hidden" name="product" value="<%= JSON.stringify(product) %>">
+
+                            <input type="submit" value="Wyślij" style="display: none;">
+                            <div class="product-img">
+                                <img src="<%= " /img/" + product.photoPath %>" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">
+                                    <%= product.name %>
+                                </h4>
+                                <div class="product-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <button class="add-product"><i class="fa-solid fa-cart-shopping"></i></button>
+                                <p class="product-price">
+                                    <%= product.price %> $
+                                </p>
+                            </div>
+                        </form>
+                        <% } %>
+                            <% }) %>
+            </div>
+
+        </section>
+
+        <%- include("partials/newsletter") %>
+
+            <section id="contactus" class="wrapper">
+
+            </section>
+
+            <script src="../public/scripts/slideshow.js"></script>
 </body>
 
 </html>

@@ -66,6 +66,7 @@ section h2 {
 }
 .nav {
   position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -216,61 +217,106 @@ section h2 {
   background-color: gray;
 }
 
-header .slide-box {
-  position: relative;
-  width: 100%;
-  height: 40vh;
-  overflow: hidden;
+header {
+  margin-top: 70px;
 }
-header .slide-box .slide {
+header .slide-show {
+  width: 100%;
+  height: 30vh;
+  background-color: rgb(0, 110, 255);
+}
+header .slide-show .slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+header .slide-show .slideshow-container .slide {
+  display: none;
+  background-color: #ffbe27;
+}
+header .slide-show .slideshow-container .slide img {
+  width: 100%;
+}
+header .slide-show .slideshow-container .slide .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+header .slide-show .slideshow-container .slide .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
-header .slide-box .slide img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+header .slide-show .slideshow-container .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
-header .slide-box .slide-one {
-  opacity: 1;
-}
-header .slide-box .prev-btn,
-header .slide-box .next-btn {
+header .slide-show .slideshow-container .prev,
+header .slide-show .slideshow-container .next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
   font-weight: bold;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+header .slide-show .slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+header .slide-show .slideshow-container .prev:hover,
+header .slide-show .slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+header .slide-show .dots-container {
+  text-align: center;
+}
+header .slide-show .dots-container .dot {
   cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
-header .slide-box .prev-btn {
-  left: 20px;
-}
-header .slide-box .next-btn {
-  right: 20px;
+header .slide-show .dots-container .active,
+header .slide-show .dots-container .dot:hover {
+  background-color: #717171;
 }
 
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 section.newsletter {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 40px;
   background-color: #04165e;
   background-repeat: no-repeat;
   background-position: 20% 30%;
-  margin: 0;
   padding: 40px 100px 40px 150px;
 }
 section.newsletter .newsletter-text h4 {
@@ -327,13 +373,13 @@ section.newproducts {
 }
 
 section.products {
-  margin-top: 20px;
   padding: 10px 20px;
 }
 section.products h2 {
   margin-bottom: 30px;
 }
 section.products .products-container {
+  margin-top: 70px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-content: center;
@@ -345,13 +391,14 @@ section.products .products-container .product-box {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 280px;
+  min-width: 300px;
   padding: 10px 20px;
   margin: 0 auto;
   background-color: white;
   box-shadow: 1px 1px 5px #c0c9d1;
   border-radius: 5px;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 section.products .products-container .product-box .product-img {
   width: 250px;
@@ -381,10 +428,10 @@ section.products .products-container .product-box .product-info .product-price {
 }
 section.products .products-container .product-box .product-info button.add-product {
   position: absolute;
+  width: 62px;
+  height: 62px;
   right: 10px;
-  bottom: 15px;
-  width: 50px;
-  height: 50px;
+  bottom: 10px;
   font-size: 20px;
   color: white;
   border: none;
@@ -417,25 +464,33 @@ section.products .products-container .product-box:hover {
     width: 320px;
     height: 320px;
   }
+}
+@media (min-width: 768px) {
   section.products .products-container .product-box .product-info button.add-product {
-    width: 65px;
-    height: 65px;
+    width: 67px;
+    height: 67px;
   }
 }
 @media (min-width: 992px) {
+  section.products {
+    padding: 10px 80px;
+    margin-top: 40px;
+  }
   section.products .products-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1200px) {
   section.products {
+    padding: 10px 100px;
     margin-top: 40px;
   }
   section.products .products-container {
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 60px;
   }
   section.products .products-container .product-box {
-    min-width: 380px;
+    min-width: 300px;
     max-width: 500px;
     max-height: 440px;
   }
@@ -444,16 +499,11 @@ section.products .products-container .product-box:hover {
     height: 300px;
   }
   section.products .products-container .product-box .product-info button.add-product {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
   }
 }
 @media (min-width: 1400px) {
-  section.products .products-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 2000px) {
   section.products .products-container {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -641,7 +691,8 @@ section.account .accountinfo .accountinfo-box .edit-button {
 section.account .accountinfo .accountinfo-box .edit-button-additional {
   margin-top: 9.5px;
 }
-section.account .accountinfo .accountinfo-box .first, section.account .accountinfo .accountinfo-box .second {
+section.account .accountinfo .accountinfo-box .first,
+section.account .accountinfo .accountinfo-box .second {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1025,4 +1076,4 @@ section.product .productbox .media-right .productbox-total .add-btn {
     width: 50%;
     overflow: hidden;
   }
-}/*# sourceMappingURL=main.css.map */
+}

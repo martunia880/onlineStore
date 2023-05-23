@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Online Store</title>
-		<link rel="stylesheet" href="./sass/main.css" />
-		<script
-			src="https://kit.fontawesome.com/56b56de47f.js"
-			crossorigin="anonymous"></script>
-		<script src="scripts/script.js"></script>
-    	<script src="scripts/serch.js"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap"
-			rel="stylesheet" />
-	</head>
 
-	<body>
-		    <%- include("partials/navbar") %>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Online Store</title>
+	<link rel="stylesheet" href="./sass/main.css" />
+	<script src="https://kit.fontawesome.com/56b56de47f.js" crossorigin="anonymous"></script>
+	<script src="scripts/script.js"></script>
+	<script src="scripts/serch.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap"
+		rel="stylesheet" />
+</head>
+
+<body>
+	<%- include("partials/navbar") %>
 		<section class="product">
 			<div class="productbox wrapper">
 				<div class="productbox-presentation box">
 					<div class="presentation">
-						<div class="presentation-img" style="background-image: url('<%= "/img/" + product.photoPath %>');"></div>
+						<div class="presentation">
+							<div class="presentation-img" style="background-image: url('<%= " /img/" + product.photoPath
+								%>')"></div>
+						</div>
 					</div>
 				</div>
 				<div class="media-right">
 					<div class="productbox-total box">
-						<h3 class="box-heading"><%= product.name %></h3>
+						<h3 class="box-heading">
+							<%= product.name %>
+						</h3>
 						<div class="total">
 							<div class="total-info">
 								<p>ilosc w magazynie</p>
 								<p>ilosc sztuk do koszyka</p>
-								<b><p>Cena</p></b>
+								<b>
+									<p>Cena</p>
+								</b>
 							</div>
 							<div class="total-info left">
-								<p class="left"><%= product.quantity %></p>
+								<p class="left">
+									<%= product.quantity %>
+								</p>
 								<select class="left selekcik">
-									<% for (let i = 1; i <= product.quantity; i++) { %>
-										<option value="<%= i %>"><%= i %></option>
-									<% } %>
+									<% for (let i=1; i <=product.quantity; i++) { %>
+										<option value="<%= i %>">
+											<%= i %>
+										</option>
+										<% } %>
 								</select>
-								<b><p class="left"><%= product.price  %> $</p></b>
+								<b>
+									<p class="left">
+										<%= product.price %> $
+									</p>
+								</b>
 							</div>
 						</div>
 						<button class="add-btn button">add</button>
 					</div>
 					<div class="productbox-description box">
 						<h3 class="box-heading">Opis</h3>
-						<p class="description-date"><%= product.description %></p>
+						<p class="description-date">
+							<%= product.description %>
+						</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<footer>
-			<p>
-				&copy; 2023 | OnlineStore
-				<span class="icon-box">
-					<a href=""><i class="fa-brands fa-square-facebook"></i></a>
-					<a href=""><i class="fa-brands fa-instagram"></i></a>
-					<a href=""><i class="fa-brands fa-twitter"></i></a>
-				</span>
-			</p>
-		</footer>
-	</body>
+</body>
+
 </html>
