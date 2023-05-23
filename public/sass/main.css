@@ -224,7 +224,7 @@ header {
 header .slide-show {
   position: relative;
   width: 100%;
-  height: 45vh;
+  height: 65vh;
 }
 header .slide-show .slideshow-container {
   width: 100%;
@@ -299,6 +299,41 @@ header .slide-show .dots-container .dot:hover {
     opacity: 1;
   }
 }
+section.achievements .achievements-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0 3em;
+}
+section.achievements .achievements-box .achievement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em 0.3em;
+}
+section.achievements .achievements-box .achievement .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+}
+section.achievements .achievements-box .achievement .icon i {
+  text-align: center;
+  font-size: 3rem;
+  color: #222;
+}
+section.achievements .achievements-box .achievement .achievement-text h3 {
+  padding: 1em 0;
+  color: #222;
+}
+section.achievements .achievements-box .achievement .achievement-text p {
+  color: #222;
+}
+
 section.newsletter {
   display: flex;
   justify-content: space-between;
@@ -462,65 +497,6 @@ section.products .products-container .product-box:hover {
   transform: scale(1.02);
 }
 
-@media (min-width: 576px) {
-  section.products h2 {
-    font-size: 32px;
-  }
-  section.products .products-container {
-    grid-gap: 60px;
-  }
-  section.products .products-container .product-box {
-    min-width: 380px;
-    max-width: 500px;
-  }
-  section.products .products-container .product-box .product-img {
-    width: 320px;
-    height: 320px;
-  }
-}
-@media (min-width: 768px) {
-  section.products .products-container .product-box .product-info button.add-product {
-    width: 67px;
-    height: 67px;
-  }
-}
-@media (min-width: 992px) {
-  section.products {
-    padding: 10px 80px;
-    margin-top: 40px;
-  }
-  section.products .products-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1200px) {
-  section.products {
-    padding: 10px 100px;
-    margin-top: 40px;
-  }
-  section.products .products-container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px;
-  }
-  section.products .products-container .product-box {
-    min-width: 300px;
-    max-width: 500px;
-    max-height: 440px;
-  }
-  section.products .products-container .product-box .product-img {
-    width: 300px;
-    height: 300px;
-  }
-  section.products .products-container .product-box .product-info button.add-product {
-    width: 50px;
-    height: 50px;
-  }
-}
-@media (min-width: 1400px) {
-  section.products .products-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 section.bag {
   padding-top: 60px;
 }
@@ -768,48 +744,6 @@ section.account .accountinfo .accountinfo-box .orders .order .return-button {
   width: 90%;
 }
 
-@media (min-width: 576px) {
-  section.newproducts .products-container .product-box {
-    flex-basis: calc(50% - 0px);
-  }
-  section.account .accountinfo .accountinfo-box {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  section.account .accountinfo .accountinfo-box .first,
-  section.account .accountinfo .accountinfo-box .second {
-    width: 50%;
-  }
-  section.account .accountinfo .accountinfo-box .orders .order .order-product {
-    justify-content: flex-start;
-  }
-}
-@media (min-width: 992px) {
-  section.newproducts .products-container {
-    max-width: 1000px;
-  }
-  section.newproducts .products-container .product-box {
-    max-width: 300px;
-    flex-basis: calc(33.3% - 60px);
-  }
-  section.bag .bagbox {
-    display: flex;
-    flex-direction: row;
-  }
-  section.bag .bagbox .box {
-    margin: 10px;
-    width: 100%;
-  }
-  section.bag .bagbox .bagbox-order {
-    margin-left: 0;
-    width: 50%;
-  }
-  section.bag .bagbox .media-right {
-    width: 50%;
-    overflow: hidden;
-  }
-}
 /* ----- LOGIN ------- */
 section.login {
   max-height: 100vh;
@@ -941,45 +875,6 @@ section.login .form-wrapper .hide {
   display: none;
 }
 
-@media (min-width: 576px) {
-  section.login .form-wrapper form {
-    padding: 40px;
-  }
-}
-@media (min-width: 992px) {
-  section.login .form-wrapper form {
-    padding: 50px;
-    width: 50vh;
-    height: 65vh;
-  }
-  section.login .form-wrapper form .input-area {
-    margin-top: 20px;
-  }
-  section.login .form-wrapper form .input-area .form-box input {
-    margin-left: -30px;
-    height: 40px;
-    font-size: 20px;
-  }
-  section.login .form-wrapper form .input-area .form-box input::-moz-placeholder {
-    font-size: 20px;
-  }
-  section.login .form-wrapper form .input-area .form-box input::placeholder {
-    font-size: 20px;
-  }
-  section.login .form-wrapper form .input-area .form-box i {
-    font-size: 22px;
-  }
-  section.login .form-wrapper form .input-area .text {
-    font-size: 16px;
-  }
-  section.login .form-wrapper form button {
-    width: 120px;
-    height: 50px;
-  }
-  section.login .form-wrapper form .form-switch {
-    font-size: 16px;
-  }
-}
 footer {
   position: absolute;
   bottom: 0;
@@ -1065,7 +960,122 @@ section.product .productbox .media-right .productbox-total .add-btn {
   font-size: 1.5rem;
 }
 
+@media (min-width: 576px) {
+  section.products h2 {
+    font-size: 32px;
+  }
+  section.products .products-container {
+    grid-gap: 60px;
+  }
+  section.products .products-container .product-box {
+    min-width: 380px;
+    max-width: 500px;
+  }
+  section.products .products-container .product-box .product-img {
+    width: 320px;
+    height: 320px;
+  }
+  section.newproducts .products-container .product-box {
+    flex-basis: calc(50% - 0px);
+  }
+  section.account .accountinfo .accountinfo-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  section.account .accountinfo .accountinfo-box .first,
+  section.account .accountinfo .accountinfo-box .second {
+    width: 50%;
+  }
+  section.account .accountinfo .accountinfo-box .orders .order .order-product {
+    justify-content: flex-start;
+  }
+  section.achievements .achievements-box {
+    margin-top: 2.5em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8em;
+  }
+  section.login .form-wrapper form {
+    padding: 40px;
+  }
+}
+@media (min-width: 768px) {
+  section.products .products-container .product-box .product-info button.add-product {
+    width: 67px;
+    height: 67px;
+  }
+  header .slide-show {
+    height: 65vh;
+  }
+}
 @media (min-width: 992px) {
+  section.products {
+    padding: 10px 80px;
+    margin-top: 40px;
+  }
+  section.products .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.newproducts .products-container {
+    max-width: 1000px;
+  }
+  section.newproducts .products-container .product-box {
+    max-width: 300px;
+    flex-basis: calc(33.3% - 60px);
+  }
+  section.bag .bagbox {
+    display: flex;
+    flex-direction: row;
+  }
+  section.bag .bagbox .box {
+    margin: 10px;
+    width: 100%;
+  }
+  section.bag .bagbox .bagbox-order {
+    margin-left: 0;
+    width: 50%;
+  }
+  section.bag .bagbox .media-right {
+    width: 50%;
+    overflow: hidden;
+  }
+  section.achievements .achievements-box {
+    margin-top: 2.5em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8em;
+  }
+  section.login .form-wrapper form {
+    padding: 50px;
+    width: 50vh;
+    height: 65vh;
+  }
+  section.login .form-wrapper form .input-area {
+    margin-top: 20px;
+  }
+  section.login .form-wrapper form .input-area .form-box input {
+    margin-left: -30px;
+    height: 40px;
+    font-size: 20px;
+  }
+  section.login .form-wrapper form .input-area .form-box input::-moz-placeholder {
+    font-size: 20px;
+  }
+  section.login .form-wrapper form .input-area .form-box input::placeholder {
+    font-size: 20px;
+  }
+  section.login .form-wrapper form .input-area .form-box i {
+    font-size: 22px;
+  }
+  section.login .form-wrapper form .input-area .text {
+    font-size: 16px;
+  }
+  section.login .form-wrapper form button {
+    width: 120px;
+    height: 50px;
+  }
+  section.login .form-wrapper form .form-switch {
+    font-size: 16px;
+  }
   section.product .productbox {
     display: flex;
     flex-direction: row;
@@ -1090,3 +1100,31 @@ section.product .productbox .media-right .productbox-total .add-btn {
     overflow: hidden;
   }
 }
+@media (min-width: 1200px) {
+  section.products {
+    padding: 10px 100px;
+    margin-top: 40px;
+  }
+  section.products .products-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+  }
+  section.products .products-container .product-box {
+    min-width: 300px;
+    max-width: 500px;
+    max-height: 440px;
+  }
+  section.products .products-container .product-box .product-img {
+    width: 300px;
+    height: 300px;
+  }
+  section.products .products-container .product-box .product-info button.add-product {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (min-width: 1400px) {
+  section.products .products-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=main.css.map */
