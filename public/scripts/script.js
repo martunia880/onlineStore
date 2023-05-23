@@ -45,6 +45,38 @@ function submitForm(event,index) {
   form.submit(); // Wyślij formularz
 }
 
+function changeCategory(category,productsLength) {
+  for (let i = 0; i < productsLength; i++) {
+    let productForm = "productForm" + i;
+    let form = document.getElementById(productForm);
+    form.style.display = 'none';
+  }
+
+  let categoriesArray = document.getElementsByClassName(category);
+  for (let i = 0; i < categoriesArray.length; i++) {
+    categoriesArray[i].style.display = 'block';
+  }
+}
+
+function createUniqueCategoriesArray(products) {
+  var categories = [];
+  
+  for (var i = 0; i < products.length; i++) {
+  var product = products[i];
+  var category = product.category;
+
+  if (categories.indexOf(category) === -1) {
+    categories.push(category);
+  }
+  }
+  
+  return categories;
+}
+
+
+
+
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

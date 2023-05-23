@@ -26,7 +26,22 @@ const shuffleArray = function shuffleArray(array) {
 	  [array[i], array[j]] = [array[j], array[i]];
 	}
 	return array;
-  }
+}
+
+function createUniqueCategoriesArray(products) {
+	var categories = [];
+	
+	for (var i = 0; i < products.length; i++) {
+	var product = products[i];
+	var category = product.category;
+
+	if (categories.indexOf(category) === -1) {
+		categories.push(category);
+	}
+	}
+	
+	return categories;
+}
 
 
 app.get('/', async function (req, res) {
@@ -57,7 +72,7 @@ app.get('/basket', function (req, res) {
 app.get('/products', async function (req, res) {
 	products = await Product.find().exec();	
 
-	res.render('products', { products });
+	res.render('products', { products, createUniqueCategoriesArray });
 });
 
 app.post('/product', async function (req, res) {
