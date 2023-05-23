@@ -9,10 +9,6 @@ const { addUser } = require('./database/services/users/addUser.js');
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
-
-
 const ejs = require('ejs');
 
 app.set('view engine', 'ejs');
@@ -21,7 +17,7 @@ app.use('/sass', express.static(__dirname + '/public/sass'));
 app.use('/scripts', express.static(__dirname + '/public/scripts'));
 app.use('/img', express.static(__dirname + '/public/img'));
 
-
+let products;
 
 //do wyeksportowania
 const shuffleArray = function shuffleArray(array) {
@@ -35,7 +31,7 @@ const shuffleArray = function shuffleArray(array) {
 
 app.get('/', async function (req, res) {
 	// Pobranie wszystkich produktów z bazy danych MongoDB
-	const products = await Product.find().exec();	
+	products = await Product.find().exec();	
 
 
 
@@ -51,28 +47,29 @@ app.get('/account', function (req, res) {
 });
 
 app.get('/form', function (req, res) {
-	res.render('form');
+	res.render('form', { products });
 });
 
 app.get('/basket', function (req, res) {
-	res.render('basket');
+	res.render('basket', { products });
 });
 
 app.get('/products', async function (req, res) {
-	const products = await Product.find().exec();	
+	products = await Product.find().exec();	
 
 	res.render('products', { products });
 });
 
-app.post('/product', function (req, res) {
+app.post('/product', async function (req, res) {
 	let product = req.body.product;
+	products = await Product.find().exec();
 
 	// console.log(serializedObjectProduct);
 	product = JSON.parse(product);
 	// console.log(product);
 
 
-	res.render('product', {product});
+	res.render('product', {product,products});
 });
 
 app.post('/product2', function (req, res) {

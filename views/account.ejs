@@ -13,25 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav">
-        <a href="index.html">
-            <h1 class="logo">OnlineStore</h1>
-        </a>
-        <div class="nav-container">
-            <div class="nav-links">
-                <!-- <a href="#categories">Categories</a>
-                <a href="#onsale">On Sale</a>
-                <a href="#contactus">Contact Us</a> -->
-            </div>
-            <div class="nav-icons">
-                <a href="#account"><i class="fa-sharp fa-solid fa-user"></i></a>
-                <a href="bag.html"><i class="fa-solid fa-basket-shopping"></i></a>>
-                <i class="fa-solid fa-magnifying-glass magnifier" onclick="toggleInput()"></i>
-                <!-- <a href="favourite"></a> -->
-            </div>
-            <input class="input-serch" id="input-serch" type="text">
-        </div>
-    </nav>
+    <%- include("partials/navbar") %>
     <div class="account-edit-background display-none">
         <form id="form-pers" data-form-name="form-pers"  class="account-form">
             <button class="button close-button"><i class="fa-solid fa-xmark"></i></button>
