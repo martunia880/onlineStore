@@ -255,20 +255,28 @@ section {
 header {
 	margin-top: 70px;
 	.slide-show {
+		position: relative;
 		width: 100%;
 		height: 30vh;
 		background-color: $accent-color;
 
 		.slideshow-container {
 			width: 100%;
+			height: 100%;
 			position: relative;
 			margin: auto;
 
 			.slide {
 				display: none;
+				position: absolute;
+				width: 100%;
+				height: 100%;
 				background-color: #ffbe27;
 				img {
 					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					vertical-align: middle;
 				}
 				.text {
 					color: #f2f2f2;
