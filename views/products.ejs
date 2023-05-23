@@ -21,46 +21,7 @@
 
 
 <body>
-<nav class="nav">
-    <a href="http://localhost:5500/">
-        <h1 class="logo">OnlineStore</h1>
-    </a>
-    <!-- <div class="nav-container nav-burger">
-        <button class="burger-icon"><i class="fas fa-bars"></i></button>
-    </div> -->
-    <div class="nav-container">
-        <div class="nav-links">
-            <a href="#categories">Categories</a>
-            <a href="products">All Products</a>
-            <a href="#contactus">Contact Us</a>
-        </div>
-        <div class="nav-icons">
-            <a href="form"><i class="fa-sharp fa-solid fa-user"></i></a>
-            <a href="basket"><i class="fa-solid fa-basket-shopping"></i></a>
-            <i class="fa-solid fa-magnifying-glass magnifier" onclick="toggleInput()"></i>
-            <!-- <a href="favourite"></a> -->
-        </div>
-        <input type="text" class="input-serch" id="input-serch" onkeyup="search()" placeholder="Wyszukaj...">
-        <button class="burger-icon" id="burger-icon" onclick="burgerMenuShow()"><i class="fas fa-bars"></i></button>
-        <div class="bookmarks-container" id="bookmarks-container">
-            <!-- <i class="fa-solid fa-magnifying-glass magnifier"
-
-                onclick="toggleInput()"></i> -->
-            <!-- co z wyszukiwarka? -->
-            <a href="#categories" class="bookmarks">Categories</a>
-            <a href="products" class="bookmarks">All Products</a>
-            <a href="basket" class="bookmarks">Basket</a>
-            <a href="#contactus" class="bookmarks">Contact Us</a>
-            <a href="form" class="bookmarks">Sign in</a>
-
-
-        </div>
-
-
-    </div>
-    <div id="results-container"><div id="search-results"></div></div>
-</nav>
-
+    <%- include("partials/navbar") %>
     <section class="products" id="products">
         <div class="products-container">
 			<% products.forEach(function(product, index) { %> <% if (index < products.length) { %>
