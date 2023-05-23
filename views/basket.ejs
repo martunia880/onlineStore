@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="sass/main.css">
+    <script src="https://kit.fontawesome.com/56b56de47f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="scripts/script.js"></script>
+    <script src="scripts/serch.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="http://localhost:5500/">
+			<h1 class="logo">OnlineStore</h1>
+		</a>
+        <!-- <div class="nav-container nav-burger">
+            <button class="burger-icon"><i class="fas fa-bars"></i></button>
+        </div> -->
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#categories">Categories</a>
+                <a href="products">All Products</a>
+                <a href="#contactus">Contact Us</a>
+            </div>
+            <div class="nav-icons">
+                <a href="form"><i class="fa-sharp fa-solid fa-user"></i></a>
+                <a href="basket"><i class="fa-solid fa-basket-shopping"></i></a>
+                <i class="fa-solid fa-magnifying-glass magnifier" onclick="toggleInput()"></i>
+                <!-- <a href="favourite"></a> -->
+            </div>
+            <input type="text" class="input-serch" id="input-serch" onkeyup="search()" placeholder="Wyszukaj...">
+            <button class="burger-icon" id="burger-icon" onclick="burgerMenuShow()"><i class="fas fa-bars"></i></button>
+            <div class="bookmarks-container" id="bookmarks-container">
+                <!-- <i class="fa-solid fa-magnifying-glass magnifier"
+
+					onclick="toggleInput()"></i> -->
+                <!-- co z wyszukiwarka? -->
+                <a href="#categories" class="bookmarks">Categories</a>
+                <a href="products" class="bookmarks">All Products</a>
+                <a href="basket" class="bookmarks">Basket</a>
+                <a href="#contactus" class="bookmarks">Contact Us</a>
+                <a href="form" class="bookmarks">Sign in</a>
+
+
+            </div>
+
+
+        </div>
+        <div id="results-container"><div id="search-results"></div></div>
+    </nav>
+    <section class="bag"> 
+        <div class="bagbox wrapper">
+            <div class="bagbox-order box">
+                <h3 class="box-heading">Your bag</h3>
+                <div class="order">
+                    <div class="order-img"></div>
+                    <div class="order-info">
+                        <h4 class="order-info-element">AirPodsy</h4>
+                        <select class="order-info-element">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <p class="order-price order-info-element">50.00$</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="media-right">
+                <div class="bagbox-delivery box">
+                    <h3 class="box-heading">Estimated delivery</h3>
+                    <p class="delivery-date">Thu. 30/03 - Fri.31/03</p>
+                </div> 
+                <div class="bagbox-payment box">
+                    <h3 class="box-heading">Payment</h3>
+                </div>
+                <div class="bagbox-total box">
+                    <h3 class="box-heading">Total</h3>
+                    <div class="total">
+                        <div class="total-info">
+                            <p>Subtotal</p>
+                            <p>Delivery</p>
+                            <b><p>Total</p></b>
+                        </div>
+                        <div class="total-info left">
+                            <p class="left">50.00$</p>
+                            <p class="left">0.00$</p>
+                            <b><p class="left">50.00$</p></b>
+                        </div>
+                    </div>
+                    <button class="pay-btn button">Pay</button>
+                </div>
+            </div>
+
+        </div>
+    </section> 
+    <footer>
+        <p> &copy; 2023 | OnlineStore
+            <span class="icon-box">
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </span>
+        </p>
+    </footer>
+</body>
+
+</html>

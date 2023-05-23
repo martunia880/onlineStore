@@ -950,7 +950,6 @@ section.product .productbox .productbox-presentation .presentation {
 section.product .productbox .productbox-presentation .presentation .presentation-img {
   width: 300px;
   height: 300px;
-  background-image: url(../img/iszmata.webp);
   background-size: cover;
   background-position: center;
 }

@@ -21,7 +21,12 @@ const productSchema = new mongoose.Schema({
   photoPath: {
     type: String,
     required: true
-  } 
+  },
+  quantity: {
+    type: Number,
+    required: true,
+    min: 0
+  }
   //ilosc
 });
 

@@ -1,3 +1,5 @@
+//const Product = require("../../database/models/product");
+
 function toggleInput() {
 	var inputDiv = document.getElementById('input-serch');
 	if (inputDiv.style.display === 'none') {
@@ -35,3 +37,18 @@ function burgerMenuShow(){
 
 }
 
+function submitForm(event,index) {
+  event.preventDefault(); // Zatrzymaj domyślne zachowanie przycisku submit
+  var productForm = "productForm" + index;
+
+  var form = document.getElementById(productForm);
+  form.submit(); // Wyślij formularz
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
