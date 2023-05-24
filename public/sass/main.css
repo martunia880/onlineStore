@@ -410,10 +410,15 @@ section.products .categories-container {
   margin-top: 40px;
   padding: 10px 15px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 20px;
 }
 section.products .categories-container p {
   padding: 10px 15px;
+}
+section.products .categories-container .categoryAll {
+  background-color: gray;
 }
 section.products .categories-container .category {
   cursor: pointer;
@@ -1128,5 +1133,4 @@ section.product .productbox .media-right .productbox-total .add-btn {
   section.products .products-container {
     grid-template-columns: repeat(4, 1fr);
   }
-
 }/*# sourceMappingURL=main.css.map */
