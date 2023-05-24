@@ -386,6 +386,7 @@ section.products .categories-container .category {
   margin-left: 30px;
   font-weight: bold;
   border: 1px solid transparent;
+  border-radius: 25px;
 }
 section.products .categories-container .category:hover {
   border: 1px solid black;
@@ -1089,4 +1090,4 @@ section.product .productbox .media-right .productbox-total .add-btn {
     width: 50%;
     overflow: hidden;
   }
-}
+}/*# sourceMappingURL=main.css.map */
