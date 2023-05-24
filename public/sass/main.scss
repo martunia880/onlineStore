@@ -258,7 +258,7 @@ header {
 	.slide-show {
 		position: relative;
 		width: 100%;
-		height: 45vh;
+		height: 65vh;
 		.slideshow-container {
 			width: 100%;
 			height: 100%;
@@ -332,6 +332,50 @@ header {
 	to {
 		opacity: 1;
 	}
+}
+
+section.achievements {
+    .achievements-box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 3em;
+
+        .achievement {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 1em 0.3em;
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 60px;
+                height: 60px;
+                background-color: $pure-white;
+                border-radius: 50%;
+                i {
+                    text-align: center;
+                    // padding: 0.5em 0.7em;
+                    font-size: 3rem;
+                    color: $font-standard;
+                }
+            }
+
+            .achievement-text {
+                h3 {
+                    padding: 1em 0;
+                    color: $font-standard;
+                }
+                p {
+                    color: $font-standard;
+                }
+            }
+        }
+    }
 }
 
 section.newsletter {
@@ -512,80 +556,6 @@ section.products {
 	}
 }
 
-@media (min-width: 576px) {
-	section.products {
-		h2 {
-			font-size: 32px;
-		}
-		.products-container {
-			grid-gap: 60px;
-			.product-box {
-				min-width: 380px;
-				max-width: 500px;
-				.product-img {
-					width: 320px;
-					height: 320px;
-				}
-			}
-		}
-	}
-}
-@media (min-width: 768px) {
-	section.products {
-		.products-container {
-			.product-box {
-				.product-info {
-					button.add-product {
-						width: 67px;
-						height: 67px;
-					}
-				}
-			}
-		}
-	}
-}
-@media (min-width: 992px) {
-	section.products {
-		padding: 10px 80px;
-		margin-top: 40px;
-		.products-container {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-}
-@media (min-width: 1200px) {
-	section.products {
-		padding: 10px 100px;
-		margin-top: 40px;
-		.products-container {
-			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 60px;
-			.product-box {
-				min-width: 300px;
-				max-width: 500px;
-				max-height: 440px;
-				.product-img {
-					width: 300px;
-					height: 300px;
-				}
-				.product-info {
-					button.add-product {
-						width: 50px;
-						height: 50px;
-					}
-				}
-			}
-		}
-	}
-}
-
-@media (min-width: 1400px) {
-	section.products {
-		.products-container {
-			grid-template-columns: repeat(4, 1fr);
-		}
-	}
-}
 
 section.bag {
 	padding-top: 60px;
@@ -832,65 +802,6 @@ section.account {
 	}
 }
 
-@media (min-width: 576px) {
-	section.newproducts {
-		.products-container {
-			.product-box {
-				flex-basis: calc(50% - 0px);
-			}
-		}
-	}
-	section.account {
-		.accountinfo {
-			.accountinfo-box {
-				flex-direction: row;
-				flex-wrap: wrap;
-				align-items: flex-start;
-				.first,
-				.second {
-					width: 50%;
-				}
-				.orders {
-					.order {
-						.order-product {
-							justify-content: flex-start;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media (min-width: 992px) {
-	section.newproducts {
-		.products-container {
-			max-width: 1000px;
-			.product-box {
-				max-width: 300px;
-				flex-basis: calc(33.3% - 60px);
-			}
-		}
-	}
-	section.bag {
-		.bagbox {
-			display: flex;
-			flex-direction: row;
-			.box {
-				margin: 10px;
-				width: 100%;
-			}
-			.bagbox-order {
-				margin-left: 0;
-				width: 50%;
-			}
-			.media-right {
-				width: 50%;
-				overflow: hidden;
-			}
-		}
-	}
-}
 
 /* ----- LOGIN ------- */
 
@@ -1034,63 +945,6 @@ section.login {
 	}
 }
 
-@media (min-width: 576px) {
-	section.login {
-		.form-wrapper {
-			form {
-				padding: 40px;
-
-				// button.send {
-				// 	margin-top: 70px;
-
-				// }
-			}
-		}
-	}
-}
-
-@media (min-width: 992px) {
-	section.login {
-		.form-wrapper {
-			form {
-				padding: 50px;
-				width: 50vh;
-				height: 65vh;
-
-				.input-area {
-					margin-top: 20px;
-
-					.form-box {
-						input {
-							margin-left: -30px;
-							height: 40px;
-							font-size: 20px;
-						}
-						input::placeholder {
-							font-size: 20px;
-						}
-						i {
-							font-size: 22px;
-						}
-					}
-
-					.text {
-						font-size: 16px;
-					}
-				}
-
-				button {
-					width: 120px;
-					height: 50px;
-				}
-
-				.form-switch {
-					font-size: 16px;
-				}
-			}
-		}
-	}
-}
 
 footer {
 	position: absolute;
@@ -1181,30 +1035,4 @@ section.product {
 	}
 }
 
-@media (min-width: 992px) {
-	section.product {
-		.productbox {
-			display: flex;
-			flex-direction: row;
-			.box {
-				margin: 10px;
-				width: 100%;
-			}
-			.productbox-presentation {
-				margin-left: 0;
-				width: 50%;
-				.presentation {
-					display: flex;
-					flex-direction: row;
-					justify-content: center;
-					align-items: center;
-					height: 100%;
-				}
-			}
-			.media-right {
-				width: 50%;
-				overflow: hidden;
-			}
-		}
-	}
-}
+@import 'media';
