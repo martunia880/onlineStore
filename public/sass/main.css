@@ -418,10 +418,15 @@ section.products .categories-container {
   margin-top: 40px;
   padding: 10px 15px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 20px;
 }
 section.products .categories-container p {
   padding: 10px 15px;
+}
+section.products .categories-container .categoryAll {
+  background-color: gray;
 }
 section.products .categories-container .category {
   cursor: pointer;
@@ -429,6 +434,7 @@ section.products .categories-container .category {
   margin-left: 30px;
   font-weight: bold;
   border: 1px solid transparent;
+  border-radius: 25px;
 }
 section.products .categories-container .category:hover {
   border: 1px solid black;
