@@ -142,7 +142,7 @@ section h2 {
   line-height: 10vh;
   align-items: center;
   transform: translate(100%);
-  transition: transform 1s ease-in;
+  transition: transform 0.4s ease-in;
 }
 .nav .nav-container .bookmarks-container a {
   font-size: 2.5rem;
@@ -224,7 +224,7 @@ header {
 header .slide-show {
   position: relative;
   width: 100%;
-  height: 65vh;
+  height: 100vh;
 }
 header .slide-show .slideshow-container {
   width: 100%;
@@ -246,7 +246,7 @@ header .slide-show .slideshow-container .slide img {
 }
 header .slide-show .slideshow-container .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 header .slide-show .slideshow-container .prev,
 header .slide-show .slideshow-container .next {
@@ -259,7 +259,7 @@ header .slide-show .slideshow-container .next {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 5s ease;
   border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -299,38 +299,46 @@ header .slide-show .dots-container .dot:hover {
     opacity: 1;
   }
 }
-section.achievements .achievements-box {
+section.benefits {
+  padding-top: 40px;
+}
+section.benefits .benefits-box {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  padding: 0 3em;
+  padding: 0 50px;
 }
-section.achievements .achievements-box .achievement {
+section.benefits .benefits-box .benefit {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1em 0.3em;
+  padding: 15px 3px;
 }
-section.achievements .achievements-box .achievement .icon {
+section.benefits .benefits-box .benefit .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background-color: white;
   border-radius: 50%;
 }
-section.achievements .achievements-box .achievement .icon i {
+section.benefits .benefits-box .benefit .icon i {
   text-align: center;
-  font-size: 3rem;
+  font-size: 30px;
   color: #222;
 }
-section.achievements .achievements-box .achievement .achievement-text h3 {
-  padding: 1em 0;
+section.benefits .benefits-box .benefit .benefit-text {
+  padding-top: 6px;
+}
+section.benefits .benefits-box .benefit .benefit-text h3 {
+  font-size: 15px;
+  padding: 6px 0;
   color: #222;
 }
-section.achievements .achievements-box .achievement .achievement-text p {
+section.benefits .benefits-box .benefit .benefit-text p {
+  font-size: 13px;
   color: #222;
 }
 
@@ -996,7 +1004,7 @@ section.product .productbox .media-right .productbox-total .add-btn {
   section.account .accountinfo .accountinfo-box .orders .order .order-product {
     justify-content: flex-start;
   }
-  section.achievements .achievements-box {
+  section.benefits .benefits-box {
     margin-top: 2.5em;
     grid-template-columns: repeat(2, 1fr);
     gap: 8em;
@@ -1045,7 +1053,7 @@ section.product .productbox .media-right .productbox-total .add-btn {
     width: 50%;
     overflow: hidden;
   }
-  section.achievements .achievements-box {
+  section.benefits .benefits-box {
     margin-top: 2.5em;
     grid-template-columns: repeat(4, 1fr);
     gap: 8em;
