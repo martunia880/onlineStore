@@ -463,12 +463,15 @@ section.products .products-container .product-box {
   cursor: pointer;
 }
 section.products .products-container .product-box .product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 250px;
   height: 250px;
 }
 section.products .products-container .product-box .product-img img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 section.products .products-container .product-box .product-info {
   position: relative;
@@ -1141,4 +1144,4 @@ section.product .productbox .media-right .productbox-total .add-btn {
   section.products .products-container {
     grid-template-columns: repeat(4, 1fr);
   }
-}/*# sourceMappingURL=main.css.map */
+}
