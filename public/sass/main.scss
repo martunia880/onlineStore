@@ -254,7 +254,7 @@ section {
 }
 
 header {
-	margin-top: 60px;
+	// margin-top: 60px;
 	.slide-show {
 		position: relative;
 		width: 100%;
@@ -265,21 +265,21 @@ header {
 			position: relative;
 			margin: auto;
 
-			.slide {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				img {
+				.slide {
+					position: absolute;
 					width: 100%;
 					height: 100%;
-					object-fit: cover;
-					vertical-align: middle;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						vertical-align: middle;
+					}
 				}
-			}
-			.fade {
-				animation-name: fade;
-				animation-duration: 1s;
-			}
+				.fade {
+					animation-name: fade;
+					animation-duration: 1s;
+				}
 
 			.prev,
 			.next {
