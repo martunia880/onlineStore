@@ -45,7 +45,22 @@ function submitForm(event,index) {
   form.submit(); // Wyślij formularz
 }
 
-function changeCategory(category,productsLength) {
+function changeCategory(category,productsLength,index) {
+  let categorySpanObj = document.getElementsByClassName("category");
+  for (let i = 0; i < categorySpanObj.length; i++) {
+    categorySpanObj[i].style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    // categorySpanObj[i].style.border = '1px solid transparent';
+  }
+
+  categorySpanClass = "category" + index;
+  categorySpanObj = document.getElementById(categorySpanClass);
+  categorySpanObj.style.backgroundColor = 'gray';
+
+  // categorySpanObj.style.border = '1px solid black';
+
+  // 'rgb(0, 110, 255)'
+
+
   for (let i = 0; i < productsLength; i++) {
     let productForm = "productForm" + i;
     let form = document.getElementById(productForm);
@@ -59,6 +74,15 @@ function changeCategory(category,productsLength) {
 }
 
 function changeOnAll(productsLength) {
+  let categorySpanObj = document.getElementsByClassName("category");
+  for (let i = 0; i < categorySpanObj.length; i++) {
+    categorySpanObj[i].style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    // categorySpanObj[i].style.border = '1px solid transparent';
+  }
+
+  categorySpanObj = document.getElementsByClassName('categoryAll');
+  categorySpanObj[0].style.backgroundColor = 'gray';
+
   for (let i = 0; i < productsLength; i++) {
     let productForm = "productForm" + i;
     let form = document.getElementById(productForm);
