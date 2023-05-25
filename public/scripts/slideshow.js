@@ -18,7 +18,7 @@ setInterval(() => {
 function showSlides(n) {
 	let i;
 	let slides = document.getElementsByClassName('slide');
-	let dots = document.getElementsByClassName('dot');
+	// let dots = document.getElementsByClassName('dot');
 	if (n > slides.length) {
 		slideIndex = 1;
 	}
@@ -28,9 +28,9 @@ function showSlides(n) {
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = 'none';
 	}
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].classList.remove('active');
-	}
+	// for (i = 0; i < dots.length; i++) {
+	// 	dots[i].className = dots[i].classList.remove('active');
+	// }
 	slides[slideIndex - 1].style.display = 'block';
-	dots[slideIndex - 1].classList.add('active');
+	// dots[slideIndex - 1].classList.add('active');
 }
