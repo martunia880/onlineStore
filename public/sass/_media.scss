@@ -78,11 +78,66 @@
 	header {
 		.slide-show {
 			height: 65vh;
+			.slideshow-container {
+
+					.slide {
+						.slide-frame {
+							.slide-text1{
+								width: 300px;
+								top: 30%;
+								left: 80%;
+								font-size: 17px;
+							}
+							.slide-text2{
+								width: 250px;
+								top: 50%;
+								left: 18%;
+								font-size: 15px;
+							}
+							.slide-text3{
+								top: 24%;
+							}
+						}
+						.slide1 {
+							background-image: url("../img/slideshow/img1.jpg");
+						}
+						.slide2 {
+							background-image: url("../img/slideshow/img2.jpg");
+						}
+						.slide3 {
+							background-image: url("../img/slideshow/img3.jpg");
+						}
+				}
+			}
 		}
-	}
-	
+	}		
 }
 @media (min-width: 992px) {
+	header {
+		.slide-show {
+			.slideshow-container {
+					.slide {
+						
+						.slide-frame {
+							max-width: 1200px;
+							.slide-text1{
+								width: 400px;
+								top: 30%;
+								left: 80%;
+							}
+							.slide-text2{
+								width: 400px;
+								top: 50%;
+								left: 20%;
+							}
+							.slide-text3{
+								top: 24%;
+							}
+						}
+				}
+			}
+		}
+	}
 	section.products {
 		padding: 10px 80px;
 		margin-top: 40px;
