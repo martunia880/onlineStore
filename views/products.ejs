@@ -22,7 +22,9 @@
 		<section class="products" id="products">
 			<div class="categories-container">
 				<%
-					const uniqueCategories = createUniqueCategoriesArray(products); // createUniqueCategoriesArray to moja funkcja wyeksportowana z app.js
+					// createUniqueCategoriesArray to moja funkcja wyeksportowana z app.js
+					let uniqueCategories = createUniqueCategoriesArray(products); 
+					uniqueCategories = uniqueCategories.sort();
 				%>
 				<span class="category categoryAll" onclick="changeOnAll('<%= products.length %>')">All</span>
 				<% for (var i = 0; i < uniqueCategories.length; i++) { %>
@@ -30,6 +32,17 @@
 				<% } %>
 			</div>
 			<div class="products-container">
+				<%products.sort(function(a, b) {
+					var nameA = a.name.toUpperCase();
+					var nameB = b.name.toUpperCase();
+					if (nameA < nameB) {
+					  return -1;
+					}
+					if (nameA > nameB) {
+					  return 1;
+					}
+					return 0;
+				  }); %>
 				<% products.forEach(function(product, index) { %>
 					<% if (index < products.length) { %>
 						<form id="productForm<%= index %>" class="product-box <%= product.category %>" action="http://localhost:5500/product"
@@ -57,7 +70,7 @@
 							</div>
 						</form>
 						<% } %>
-							<% }) %>
+					<% }) %>
 			</div>
 		</section>
 

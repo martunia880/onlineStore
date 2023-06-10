@@ -129,7 +129,7 @@ section {
 
 		.burger-icon {
 			display: none;
-			padding: 0 30px;
+			padding: 0 10px;
 			line-height: 60px;
 			font-size: 30px;
 			background: none;
@@ -199,10 +199,16 @@ section {
 			color: red;
 		}
 
+		@media (min-width: 576px) {
+			.burger-icon {
+				padding: 0 20px;
+			}
+		}
+
 		@media (max-width: 768px) {
 			.burger-icon {
 				display: block;
-				// transition: 3s;
+				transition: 0.4s;
 			}
 
 			.nav-icons {

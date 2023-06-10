@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const Cart = require('./cart');
 const internal = require('stream');
 
-const userSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -28,8 +29,28 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'],
     default: 'user'
   },
+  cart: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Cart',
+    //required: true
+  }
 })
 
-const User = mongoose.model('User', userSchema);
+UserSchema.pre('save', function (next) {
+  const user = this;
+  if (!user.cart) {
+    const cart = new Cart({ user: user._id, products: [] });
+    cart.save()
+      .then((savedCart) => {
+        user.cart = savedCart._id;
+        next();
+      })
+      .catch((error) => next(error));
+  } else {
+    next();
+  }
+});
+
+const User = mongoose.model('User', UserSchema);
 
 module.exports = User;
