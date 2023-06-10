@@ -239,13 +239,58 @@ header .slide-show .slideshow-container .slide {
   position: absolute;
   width: 100%;
   height: 100%;
+  position: relative;
 }
-header .slide-show .slideshow-container .slide img {
+header .slide-show .slideshow-container .slide .slide-frame {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   vertical-align: middle;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+header .slide-show .slideshow-container .slide .slide-frame .slide-text1 {
+  width: 500px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .slide-show .slideshow-container .slide .slide-frame .slide-text2 {
+  width: 500px;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: 25%;
+  left: 50%;
+  font-size: 18px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+header .slide-show .slideshow-container .slide .slide-frame .slide-text3 {
+  width: 500px;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: 33%;
+  left: 50%;
+  font-size: 18px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .slide-show .slideshow-container .slide .slide1 {
+  background-image: url("../img/slideshow/img1-phone.jpg");
+}
+header .slide-show .slideshow-container .slide .slide2 {
+  background-image: url("../img/slideshow/img2-phone.jpg");
+}
+header .slide-show .slideshow-container .slide .slide3 {
+  background-image: url("../img/slideshow/img3-phone.jpg");
 }
 header .slide-show .slideshow-container .fade {
   animation-name: fade;
@@ -347,7 +392,7 @@ section.benefits .benefits-box .benefit .benefit-text p {
 
 section.newsletter {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   margin-top: 40px;
@@ -386,7 +431,7 @@ section.newsletter .newsletter-form input {
 }
 section.newsletter .newsletter-form button {
   height: 45px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   padding: 0 30px;
   background-color: rgba(27, 181, 127, 0.7450980392);
@@ -400,6 +445,84 @@ section.newsletter .newsletter-form button {
 }
 section.newsletter .newsletter-form button:hover {
   padding: 0 35px;
+}
+@media screen and (max-width: 992px) {
+  section.newsletter {
+    display: flexbox;
+    justify-content: center;
+    padding: 40px 0;
+  }
+  section.newsletter .newsletter-text {
+    width: 65%;
+    text-align: center;
+  }
+  section.newsletter .newsletter-form {
+    width: 60%;
+    margin-top: 20px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px 0;
+}
+footer .logo {
+  font-family: "Satisfy", cursive;
+  font-size: 5rem;
+}
+footer h4 {
+  font-size: 20px;
+  font-weight: 900;
+  padding: 32px 0 20px 0;
+}
+footer p {
+  font-size: 17px;
+  color: #3e4043;
+  margin: 0 0 8px 0;
+}
+footer p strong {
+  font-weight: 600;
+}
+footer a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #3e4043;
+  margin-bottom: 10px;
+}
+footer a:hover {
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+}
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+footer .follow h4 {
+  padding-bottom: 10px;
+}
+footer .follow .icon-box a {
+  margin-right: 2px;
+}
+@media screen and (max-width: 992px) {
+  footer {
+    flex-direction: row;
+  }
+  footer .col {
+    margin: 30px 0;
+  }
+  footer .col .logo {
+    align-self: center;
+  }
+  footer .follow {
+    align-self: center;
+  }
 }
 
 section.newproducts {
@@ -895,11 +1018,6 @@ section.login .form-wrapper .hide {
   display: none;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-}
-
 section.product {
   padding-top: 60px;
 }
@@ -1027,8 +1145,48 @@ section.product .productbox .media-right .productbox-total .add-btn {
   header .slide-show {
     height: 65vh;
   }
+  header .slide-show .slideshow-container .slide .slide-frame .slide-text1 {
+    width: 300px;
+    top: 30%;
+    left: 80%;
+    font-size: 17px;
+  }
+  header .slide-show .slideshow-container .slide .slide-frame .slide-text2 {
+    width: 250px;
+    top: 50%;
+    left: 18%;
+    font-size: 15px;
+  }
+  header .slide-show .slideshow-container .slide .slide-frame .slide-text3 {
+    top: 24%;
+  }
+  header .slide-show .slideshow-container .slide .slide1 {
+    background-image: url("../img/slideshow/img1.jpg");
+  }
+  header .slide-show .slideshow-container .slide .slide2 {
+    background-image: url("../img/slideshow/img2.jpg");
+  }
+  header .slide-show .slideshow-container .slide .slide3 {
+    background-image: url("../img/slideshow/img3.jpg");
+  }
 }
 @media (min-width: 992px) {
+  header .slide-show .slideshow-container .slide .slide-frame {
+    max-width: 1200px;
+  }
+  header .slide-show .slideshow-container .slide .slide-frame .slide-text1 {
+    width: 400px;
+    top: 30%;
+    left: 80%;
+  }
+  header .slide-show .slideshow-container .slide .slide-frame .slide-text2 {
+    width: 400px;
+    top: 50%;
+    left: 20%;
+  }
+  header .slide-show .slideshow-container .slide .slide-frame .slide-text3 {
+    top: 24%;
+  }
   section.products {
     padding: 10px 80px;
     margin-top: 40px;
