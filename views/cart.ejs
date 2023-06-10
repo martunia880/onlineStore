@@ -21,18 +21,25 @@
         <div class="bagbox wrapper">
             <div class="bagbox-order box">
                 <h3 class="box-heading">Your bag</h3>
-                <div class="order">
-                    <div class="order-img"></div>
-                    <div class="order-info">
-                        <h4 class="order-info-element">AirPodsy</h4>
-                        <select class="order-info-element">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <p class="order-price order-info-element">50.00$</p>
+                <% cart[0].products.forEach(function(product, index) { %>
+                    <div class="order">
+                        <div class="order-img" style="background-image: url('<%= " /img/" + product.photoPath %>');"></div>
+                        <div class="order-info">
+                            <h4 class="order-info-element"><%= product.name %></h4>
+                            <select class="order-info-element" id="order-info-element-<%= index %>">
+                                <% for (let i=1; i <=product.quantity; i++) { %>
+                                    <option value="<%= i %>">
+                                        <%= i %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                            <script>
+                                document.getElementById("order-info-element-<%= index %>").value = "<%= product.quantityInCart %>";
+                            </script>
+                            <p class="order-price order-info-element"><%= product.price %>$</p>
+                        </div>
                     </div>
-                </div>
+                <% }) %>
             </div> 
             <div class="media-right">
                 <div class="bagbox-delivery box">
