@@ -27,7 +27,6 @@ const productSchema = new mongoose.Schema({
     required: true,
     min: 0
   }
-  //ilosc
 });
 
 const Product = mongoose.model('Product', productSchema);

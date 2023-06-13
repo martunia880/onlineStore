@@ -23,6 +23,8 @@ function addProduct(name, description, price, category, photoPath, quantity) {
         quantity: quantity
       });
   }
+
+ 
   
   addProduct('SONY WH-1000XM4 ANC', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sint, ab obcaecati quae doloribus, minima iusto laboriosam, quo assumenda repellat aspernatur at magni praesentium? Consequuntur nulla dolores saepe eligendi cupiditate nemo recusandae maxime laboriosam dolore illo! Ducimus eius distinctio illo ab commodi obcaecati. Distinctio architecto nulla laudantium vitae expedita, enim minima facilis labore error cumque voluptate natus velit similique perspiciatis.', 1199, 'Słuchawki','wh-1000xm5-anc-czarny-4548736132580-1.jpg.webp', 5)
   addProduct('STEELSERIES Rival 3', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores quaerat magni, molestiae natus quasi eius ratione libero vero omnis. Tempore soluta id iusto consectetur hic voluptate odit quam sit.', 130, 'Myszki','steelseries-rival-3-1.jpg.webp', 15)

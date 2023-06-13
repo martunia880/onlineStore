@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 require('./database/utils/connectDb.js');
 const User = require('./database/models/user');
-
 const Product = require('./database/models/product');
+const Cart = require('./database/models/cart');
 const { addUser } = require('./database/services/users/addUser.js');
 
 
@@ -18,6 +18,7 @@ app.use('/scripts', express.static(__dirname + '/public/scripts'));
 app.use('/img', express.static(__dirname + '/public/img'));
 
 let products;
+let product;
 
 //do wyeksportowania
 const shuffleArray = function shuffleArray(array) {
@@ -65,8 +66,64 @@ app.get('/form', function (req, res) {
 	res.render('form', { products });
 });
 
-app.get('/basket', function (req, res) {
-	res.render('basket', { products });
+app.get('/cart', async function (req, res) {
+	let cart = await Cart.find().exec();
+	res.render('cart', { products, cart });
+});
+
+app.post('/cart', async function (req, res) {
+	product = req.body.product;
+	product = JSON.parse(product);
+	console.log(product);
+
+
+
+	let user = await User.findById('6478c075a46e33bd0d308a65');
+	console.log(user);
+	
+	// Dodawanie produktu do koszyka nie po ID
+	async function addProductToCart(product,user) {
+
+		if (!user || !product) {
+			throw new Error('Nie znaleziono użytkownika lub produktu');
+		}else
+		{
+			let cartId = user.cart;
+			console.log('cartId:', cartId);
+			console.log('product._id:', product._id);
+			
+			let existingProduct = await Cart.findOne({
+			  _id: cartId,
+			  "products._id": product._id
+			},{ "products.$": 1 });
+			
+			console.log('existingProduct:', existingProduct);
+			
+			
+			if(existingProduct){
+				// Produkt już znajduje się w koszyku, zwiększ quantityInCart o 1
+				await Cart.findOneAndUpdate(
+					{
+					  _id: cartId,
+					  'products._id': product._id
+					},
+					{ $inc: { 'products.$.quantityInCart': 1 } },
+					{ new: true }
+				  ).populate('products');
+				  let cart = await Cart.find().exec();	
+				  res.render('cart', { products, cart });
+			}else{
+				// Produkt nie istnieje w koszyku, dodaj go
+				await Cart.findByIdAndUpdate(
+					cartId,
+					{ $push: { products: product } },
+					{ new: true }).populate('products');
+			}
+			let cart = await Cart.find().exec();
+			res.render('cart', { products, cart });	
+		}
+	}
+	addProductToCart(product,user);
 });
 
 app.get('/contactus', (req, res) => {
@@ -74,14 +131,12 @@ app.get('/contactus', (req, res) => {
   });
 
 app.get('/products', async function (req, res) {
-	products = await Product.find().exec();	
 
 	res.render('products', { products, createUniqueCategoriesArray });
 });
 
 app.post('/product', async function (req, res) {
 	let product = req.body.product;
-	products = await Product.find().exec();
 
 	// console.log(serializedObjectProduct);
 	product = JSON.parse(product);
@@ -91,20 +146,7 @@ app.post('/product', async function (req, res) {
 	res.render('product', {product,products});
 });
 
-app.post('/product2', function (req, res) {
-	console.log("pupu");
-	const serializedObjectProduct = req.body.resultId;
-	// const productQuantity = req.body.productQuantity;
-	// const productPrice = req.body.productPrice;
-	// const productDescription = req.body.productDescription;
-	// const productPhotoPath = req.body.productPhotoPath;
-	console.log(serializedObjectProduct);
-	const product = JSON.parse(serializedObjectProduct);
 
-
-	// res.render('product', {productName, productQuantity, productPrice, productDescription, productPhotoPath});
-	res.render('product', {product});
-});
 
 const login = async (email, password) => {
 	try {
@@ -122,19 +164,18 @@ const login = async (email, password) => {
 	}
 };
 
-app.post('/checkYourLoginDetails', (req, res) => {
+app.post('/checkYourLoginDetails', async (req, res) => {
 	const email = req.body.email;
 	const password = req.body.password;
 
 	login(email, password).then(async (npm) => {
 		if (npm === true) {
-			//const users = [{ name: 'John' }, { name: 'Jane' }];
-			const products = await Product.find().exec();
+			
 			res.render('index', { products, message: 'udało się zalogować.', shuffleArray });
-			//res.render('index', { users: users});
+			
 
 		} else {
-			res.render('form', { alertLoginMessage: 'nie udało się zalogować.' });
+			res.render('form', { alertLoginMessage: 'nie udało się zalogować.', products });
 		}
 	});
 });
@@ -151,7 +192,7 @@ app.post('/addUserFromRegistration', async (req, res) => {
 		console.log('Udało się Zarejestrować!');
 		let positiveRegistration = true;
 		const alertLoginMessage2 = "Teraz proszę się zalogować.";
-		res.render('form', { alertLoginMessage: 'Udało się zarejestrować.', positiveRegistration, alertLoginMessage2 });
+		res.render('form', { alertLoginMessage: 'Udało się zarejestrować.', positiveRegistration, alertLoginMessage2, products  });
 
 		
 		//npm = true;
