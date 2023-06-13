@@ -69,6 +69,10 @@ app.get('/basket', function (req, res) {
 	res.render('basket', { products });
 });
 
+app.get('/contactus', (req, res) => {
+	res.render('contactus', { products: products  });
+  });
+
 app.get('/products', async function (req, res) {
 	products = await Product.find().exec();	
 
