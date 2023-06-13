@@ -1098,6 +1098,37 @@ section.product .productbox .media-right .productbox-total .add-btn {
   font-size: 1.5rem;
 }
 
+section.contactus .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+section.contactus .container form .form-group {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+section.contactus .container form .form-group label {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+section.contactus .container form .form-group input,
+section.contactus .container form .form-group textarea {
+  width: 60vw;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  overflow: auto;
+  max-width: 800px;
+}
+section.contactus .container form .form-group textarea {
+  height: 250px;
+}
+
 @media (min-width: 576px) {
   section.products h2 {
     font-size: 32px;
@@ -1171,12 +1202,9 @@ section.product .productbox .media-right .productbox-total .add-btn {
   }
 }
 @media (min-width: 992px) {
-  header .slide-show .slideshow-container .slide .slide-frame {
-    max-width: 1200px;
-  }
   header .slide-show .slideshow-container .slide .slide-frame .slide-text1 {
     width: 400px;
-    top: 30%;
+    top: 40%;
     left: 80%;
   }
   header .slide-show .slideshow-container .slide .slide-frame .slide-text2 {

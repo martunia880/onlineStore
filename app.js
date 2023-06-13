@@ -126,6 +126,10 @@ app.post('/cart', async function (req, res) {
 	addProductToCart(product,user);
 });
 
+app.get('/contactus', (req, res) => {
+	res.render('contactus', { products: products  });
+  });
+
 app.get('/products', async function (req, res) {
 
 	res.render('products', { products, createUniqueCategoriesArray });
