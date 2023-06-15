@@ -69,7 +69,7 @@ app.get('/form', function (req, res) {
 app.get('/cart', async function (req, res) {
 	let cart = await Cart.find().exec();
 	res.render('cart', { products, cart });
-});
+}); 
 
 app.post('/cart', async function (req, res) {
 	product = req.body.product;
@@ -124,7 +124,28 @@ app.post('/cart', async function (req, res) {
 		}
 	}
 	addProductToCart(product,user);
-});
+}); 
+
+app.post("/updateQuantity", async (req, res) => {
+	const productId = req.body.productId;
+	const quantity = req.body.quantity;
+	console.log(productId);
+	console.log(quantity);
+
+	let user = await User.findById('6478c075a46e33bd0d308a65');
+	let cartId = user.cart;
+
+	await Cart.findOneAndUpdate(
+		{
+		  _id: cartId,
+		  'products._id': productId
+		},
+		{ $set: { 'products.$.quantityInCart': quantity } },
+		{ new: true }
+	  ).populate('products');
+	  let cart = await Cart.find().exec();	
+	  res.render('cart', { products, cart });
+  });
 
 app.get('/contactus', (req, res) => {
 	res.render('contactus', { products: products  });

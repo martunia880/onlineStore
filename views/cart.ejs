@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="scripts/script.js"></script>
     <script src="scripts/serch.js"></script>
+    <script src="scripts/cart.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Satisfy&display=swap" rel="stylesheet">
 </head>
@@ -26,7 +27,7 @@
                         <div class="order-img" style="background-image: url('<%= " /img/" + product.photoPath %>');"></div>
                         <div class="order-info">
                             <h4 class="order-info-element"><%= product.name %></h4>
-                            <select class="order-info-element" id="order-info-element-<%= index %>">
+                            <select class="order-info-element" id="order-info-element-<%= index %>" name="quantity" onchange="updateQuantity('<%= index %>','<%= product.id %>')">
                                 <% for (let i=1; i <=product.quantity; i++) { %>
                                     <option value="<%= i %>">
                                         <%= i %>
