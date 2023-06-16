@@ -15,4 +15,26 @@ function updateQuantity(index,productID) {
       }
     };
     xhr.send("productId=" + encodeURIComponent(productId) + "&quantity=" + encodeURIComponent(quantity));
-  }
+    setTimeout(function() {
+        window.location.reload();
+      }, 1000); //setTimeout bo funkcja asynchroniczna
+    }
+
+function removeProduct(productID) {
+    const productId = productID;
+    console.log(productId);
+
+    // Wywołaj żądanie AJAX do serwera
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/removeProduct", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        console.log("Produkt został usunięty z koszyka");
+      }
+    };
+    xhr.send("productId=" + encodeURIComponent(productId));
+    setTimeout(function() {
+        window.location.reload();
+      }, 1000);  
+} //setTimeout bo funkcja asynchroniczna

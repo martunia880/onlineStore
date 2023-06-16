@@ -34,18 +34,20 @@
                                     </option>
                                     <% } %>
                             </select>
-                            <script>
+                            <script> 
                                 document.getElementById("order-info-element-<%= index %>").value = "<%= product.quantityInCart %>";
                             </script>
                             <p class="order-price order-info-element"><%= product.price %>$</p>
                         </div>
+                        <button class="delete-product-btn" onclick="removeProduct('<%= product.id %>')">X</button>
                     </div>
                 <% }) %>
             </div> 
             <div class="media-right">
                 <div class="bagbox-delivery box">
                     <h3 class="box-heading">Estimated delivery</h3>
-                    <p class="delivery-date">Thu. 30/03 - Fri.31/03</p>
+                    <p class="delivery-date" id="delivery-date"></p>
+                    <script src="scripts/deliveryDateInCart.js"></script>
                 </div> 
                 <div class="bagbox-payment box">
                     <h3 class="box-heading">Payment</h3>
@@ -54,17 +56,26 @@
                     <h3 class="box-heading">Total</h3>
                     <div class="total">
                         <div class="total-info">
-                            <p>Subtotal</p>
-                            <p>Delivery</p>
-                            <b><p>Total</p></b>
+                            <% cart[0].products.forEach(function(product, index) { %>
+                                <p><%= product.name %></p>
+                            <% }) %>
+                            <p class="empty-paragraph"></p>
+                            <b><p>Subtotal</p></b>
+                            <b><p>Delivery</p></b>
+                            <b><p class="total-price">Total</p></b>
                         </div>
                         <div class="total-info left">
-                            <p class="left">50.00$</p>
-                            <p class="left">0.00$</p>
-                            <b><p class="left">50.00$</p></b>
+                            <% cart[0].products.forEach(function(product, index) { %>
+                                <p class="left"><%= product.price %>$ x <%= product.quantityInCart %> = <span class="multiply-price-and-quantity"><%= multiplyPriceAndQuantity(product.price, product.quantityInCart) %></span>$</p>
+                            <% }) %>
+                            <p class="empty-paragraph"></p>
+                            <b><p class="left"><span id="subtotal"></span>$</p></b>
+                            <b><p class="left"><span id="deliveryPrice"></span>$</p></b>
+                            <b><p class="left total-price"><span id="total"></span>$</p></b>
+                            <script src="scripts/totalPrice.js"></script>
                         </div>
                     </div>
-                    <button class="pay-btn button">Pay</button>
+                    <div class="pay-btn-container"><button class="pay-btn button">Pay</button></div>
                 </div>
             </div>
 

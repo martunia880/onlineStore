@@ -77,7 +77,6 @@ function changeOnAll(productsLength) {
   let categorySpanObj = document.getElementsByClassName("category");
   for (let i = 0; i < categorySpanObj.length; i++) {
     categorySpanObj[i].style.backgroundColor = 'rgba(0, 0, 0, 0)';
-    // categorySpanObj[i].style.border = '1px solid transparent';
   }
 
   categorySpanObj = document.getElementsByClassName('categoryAll');
