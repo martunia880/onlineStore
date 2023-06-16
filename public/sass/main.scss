@@ -51,9 +51,12 @@ section {
 	cursor: pointer;
 	transition: background-color 0.3s, transform 0.3s;
 	box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+	text-shadow: 0 0 1px;
 }
 .button:hover {
-	background-color: $hover-color;
+	background-color: $super-gold;
+	color: black;
+	text-shadow: 0 0 1px black;
 	transform: scale(1.05);
 }
 
@@ -236,8 +239,11 @@ section {
 		width: 50vw;
 		height: 50vh;
 		background-color: $field-bg-color;
-		border-top: 1px solid;
 		overflow-y: auto;
+		border: 1px solid;
+		border-top: hidden;
+		border-right: hidden;
+		box-shadow: -1px 1px 1px ;
 		#search-results {
 			display: flex;
 			flex-direction: column;
@@ -699,7 +705,8 @@ section.products {
 					cursor: pointer;
 				}
 				button.add-product:hover {
-					background-color: #325f85;
+					//background-color: #325f85;
+					background-color: $super-gold;
 					transform: scale(1.05);
 				}
 			}
@@ -731,6 +738,7 @@ section.bag {
 				align-items: center;
 				height: 200px;
 				background-color: $pure-white;
+				//box-shadow: 0px 0px 3px;
 				.order-img {
 					margin: 15px;
 					width: 150px;
@@ -755,6 +763,24 @@ section.bag {
 					select {
 						width: 20%;
 					}
+					select:hover{
+					cursor: pointer;
+					}
+				}
+				.delete-product-btn {
+					width: 30px;
+					height: 30px;
+					font-size: 2rem;
+					border: hidden;
+					background-color: $pure-white;
+					color: red;
+					text-shadow: 0px 0px 1px black;
+					transition: 0.2s;
+				}
+				.delete-product-btn:hover{
+					transition: 0.2s;
+					transform: scale(1.3);
+					cursor: pointer;
 				}
 			}
 		}
@@ -767,17 +793,17 @@ section.bag {
 		.bagbox-total {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			.box-heading {
 				text-align: center;
 			}
+
 			.total {
 				padding: 0 20px;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 				.total-info {
-					height: 100px;
+					flex-grow: 1;
 					padding: 5px 0;
 					p {
 						padding: 3px 0;
@@ -785,13 +811,27 @@ section.bag {
 					.left {
 						text-align: right;
 					}
+					.total-price{
+					text-shadow: 0px 0px 4px $super-gold;
+					}
+					.empty-paragraph{
+						border-bottom: 2px solid ;
+					}
 				}
 			}
-			.pay-btn {
-				padding: 10px 20px;
-				margin: 10px;
-				font-size: 1.5rem;
+			.pay-btn-container{
+				display: flex;
+				justify-content: center;
+				.pay-btn {
+					padding: 10px 20px;
+					margin: 10px;
+					font-size: 1.5rem;
+					width: 90%;
+	
+				}
 			}
+			
+
 		}
 	}
 }
@@ -1156,8 +1196,10 @@ section.product {
 					flex-direction: row;
 					justify-content: space-between;
 					.total-info {
+						display: flex;
 						height: 100px;
 						padding: 5px 0;
+						align-items: center;
 						p {
 							padding: 3px 0;
 						}
@@ -1174,11 +1216,16 @@ section.product {
 						justify-content: space-evenly;
 					}
 				}
-				.add-btn {
-					padding: 10px 20px;
-					margin: 10px;
-					font-size: 1.5rem;
+				form{
+					display: flex;
+					justify-content: center;
+					.add-btn {
+						margin: 10px;
+						font-size: 1.5rem;
+						width: 90%;
+					}
 				}
+				
 			}
 		}
 	}
