@@ -22,7 +22,7 @@
         <div class="bagbox wrapper">
             <div class="bagbox-order box">
                 <h3 class="box-heading">Your bag</h3>
-                <% cart[0].products.forEach(function(product, index) { %>
+                <% cart.products.forEach(function(product, index) { %>
                     <div class="order">
                         <div class="order-img" style="background-image: url('<%= " /img/" + product.photoPath %>');"></div>
                         <div class="order-info">
@@ -56,7 +56,7 @@
                     <h3 class="box-heading">Total</h3>
                     <div class="total">
                         <div class="total-info">
-                            <% cart[0].products.forEach(function(product, index) { %>
+                            <% cart.products.forEach(function(product, index) { %>
                                 <p><%= product.name %></p>
                             <% }) %>
                             <p class="empty-paragraph"></p>
@@ -65,7 +65,7 @@
                             <b><p class="total-price">Total</p></b>
                         </div>
                         <div class="total-info left">
-                            <% cart[0].products.forEach(function(product, index) { %>
+                            <% cart.products.forEach(function(product, index) { %>
                                 <p class="left"><%= product.price %>$ x <%= product.quantityInCart %> = <span class="multiply-price-and-quantity"><%= multiplyPriceAndQuantity(product.price, product.quantityInCart) %></span>$</p>
                             <% }) %>
                             <p class="empty-paragraph"></p>
