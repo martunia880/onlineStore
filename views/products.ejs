@@ -45,7 +45,7 @@
 				  }); %>
 				<% products.forEach(function(product, index) { %>
 					<% if (index < products.length) { %>
-						<form id="productForm<%= index %>" class="product-box <%= product.category %>" action="http://localhost:5500/product"
+						<form id="productForm<%= index %>" class="product-box <%= product.category %>" action="/product"
 							method="POST" onclick="submitForm(event,'<%= index %>')" >
 							<input type="hidden" name="product" value="<%= JSON.stringify(product) %>">
 							<input type="submit" value="Wyślij" style="display: none;">
